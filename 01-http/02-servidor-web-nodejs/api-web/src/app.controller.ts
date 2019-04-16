@@ -13,7 +13,7 @@ export class AppController {
   //cuando se hace cambio en la logica del servidor se debe reiniciar el servidor
   //para ello se puede usar npm run start:dev
 
-  @Get('/HolaMundo')//alt+enter para importar arriba directamente
+  @Post('/HolaMundo')//alt+enter para importar arriba directamente
   @HttpCode(205)
   postHolaMundo() {
     return 'Hola mundo en post';
@@ -26,7 +26,7 @@ export class AppController {
   @Delete('/Ciao_mondo')
   CiaoMondo(): string{
     return '\n' +
-        'Italiano'
+        'Ciao_mondo'
   }
 
 
