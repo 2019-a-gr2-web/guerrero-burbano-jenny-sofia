@@ -5,7 +5,7 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) { }
 
-  @Get('/HelloWorld')
+  @Get('/Hello-World')
   getHello(): string {
     return 'HELLO WORLD';
   }
@@ -13,9 +13,8 @@ export class AppController {
   //cuando se hace cambio en la logica del servidor se debe reiniciar el servidor
   //para ello se puede usar npm run start:dev
 
-  @Post('/HolaMundo')//alt+enter para importar arriba directamente
-  @HttpCode(205)
-  postHolaMundo() {
+  @Post('/Hola-Mundo')//alt+enter para importar arriba directamente
+  hola() {
     return 'Hola mundo en post';
   }
   @Put('/Bonjour_le_monde')
