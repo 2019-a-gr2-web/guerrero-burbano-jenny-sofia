@@ -43,7 +43,7 @@ export class AppController {
     if(numeroCabecera == numeroRandomico){
       return ':)'
     }else{
-      return ':('
+      return ':(...'
     }
 
   }
