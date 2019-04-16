@@ -1,0 +1,12 @@
+[
+  {
+    "Nombre": "Sofia",
+    "Key" : "value ",
+    "edad" : 29,
+    "sueldo:": 10.21,
+    "casado": ,
+    "hijos": ["Micky ", 1,1.01, null,{
+      "nombre": "Micky Guerrero"
+    }]
+  }
+]
