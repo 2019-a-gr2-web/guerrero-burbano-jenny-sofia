@@ -1,77 +1,183 @@
-import {Controller, Get, Post, HttpCode, Put, Delete, Headers} from '@nestjs/common';
+import {Controller, Get, Post, HttpCode, Put, Delete, Headers, Query, Param, Body, Request, Response} from '@nestjs/common';
 import { AppService } from './app.service';
-import {ok} from "assert";
-import any = jasmine.any;
+
+//http:ip:puerto/segmentoInicial/segmentoInicial
+//@Controller(Segemento)
+//el segmento Accion se pone en cada método
+
 
 @Controller('/api')
 export class AppController {
-  constructor(private readonly appService: AppService) { }
+    constructor(private readonly appService: AppService) { }
 
-  @Get('/Hello-World')
-  getHello(): string {
-    var nombre= 'Sofía'
-    var edad= 21
-    var sueldo= 1.20;
-    var casado= false
-    var hijos= null
-    var alas= undefined
-    return 'HELLO WORLD';
-  }
+    /* @Get('/helloWorld')
+     getHello(): string {
+       return this.appService.getHello();
+     }*/
+    //cuando se hace cambio en la logica del servidor se debe reiniciar el servidor
+    //para ello se puede usar npm run start:dev
 
-  //cuando se hace cambio en la logica del servidor se debe reiniciar el servidor
-  //para ello se puede usar npm run start:dev
+    /* @Post()//alt+enter para importar arriba directamente
+     @HttpCode(205)
+     postHello() {
+       return 'Hola mundo en post';
+     }*/
 
-  @Post('/hola-mundo')//alt+enter para importar arriba directamente
-  hola() {
-    return 'Hola mundo en post';
-  }
-  @Put('/Bonjour_le_monde')
-  bonjour(): string{
-    return '\n' +
-        'Bonjour le monde'
-  }
-  @Delete('/Ciao_mondo')
-  CiaoMondo(): string{
-    return '\n' +
-        'Ciao_mondo'
-  }
-  @Get('/adivina')
-  adivina(@Headers() headers){
-    console.log('Headers', headers.numero)
-    const numeroRandomico=  Math.round(Math.random()*10)
-    const numeroCabecera= Number(headers.numero)
-    if(numeroCabecera == numeroRandomico){
-      return ':)'
-    }else{
-      return ':(...'
+    /*Segmento inicial*/
+//segmento a: GET: 'hello-world
+    //segmento a: POST: 'HOLA-MUNDO'
+    // put , delete
+
+    @Get('/hola-mundo')
+    holaMundo(){
+        return 'Hola mundo';
     }
 
-  }
+    @Post('/hello-world')
+    helloWorld(){
+        return 'Hello world';
+    }
+    @Put('/salut-monde')
+    putBonJour(){
+        return 'salut-monde';
+    }
+
+    @Delete('/ola-mundo')
+    olaMundo(){
+        return 'ola mundo';
+    }
+
+//un decorador es la ejecucion de una funcion
+    @Get('/adivina')
+    adivina(@Headers() headers){ // parametro de un metodo de una clase, la clase headers usar la cabecera de nestjs, verificar si está importado, con esto tengo acceso a las cabeceras
+        //estoy usando el decorador @Headers para el parametro headers
+
+        const numeroRandom=Math.round(Math.random()*10)
+        //return numeroRandom;// en javascrip no existen enteros, son numeros y ya
+        console.log('Headers: ',headers);
+        // return headers.alv
+        const numeroCabecer=Number(headers.numero)
+        if(numeroCabecer ==numeroRandom ){
+            return 'ok'
+        }else{
+            return ':('
+        }
 
 
+        //parametros de clave y valor (le indicamos cómo va mandar los datos el cliente)
+        //?llave=valor&llave2=valor2
+
+
+
+
+
+
+    }
+
+    //JSON es la notacion de objetos en JS, un archivo json no puede estar vacio, es usado porque es ligero y facil de entender
+    //abosultamente todas las llaves deben estar entre comillas DOBLES, estandar JSON (Java Script Object Notation)
+    //todos los string en JSON tienen comillas dobles
+    //en los archivos JSON no existen undefined
+    //un archivo JSON soporta objetos JSON y arreglos JSON
+    /**
+     *
+     *
+     *
+     *
+     *
+     */
+
+
+
+    /*var nombre:string='Cesar' //String
+         var edad:number=20 //number
+         var sueldo=120.50 //number
+         var casado=false//boolean
+         var hijos=null//null
+         var alas=undefined//undefined*/
+
+
+    //usar let en lugar de var
+    //para variables usar const (variable constante)
+
+
+    @Post('/consultar')
+    consultar(@Query() queryParams){
+        console.log(queryParams)
+        if(queryParams.nombre){
+            return 'hola sofi'
+        }else{
+
+        }
+    }
+    @Get('/ciudad/:ciudad')
+    ciudad(@Param() parametrosRuta){
+        parametrosRuta.ciudad='s'
+        switch(parametrosRuta.ciudad.toLowerCase()) {
+            case 'quito':
+                     return 'Que fueff'
+            case 'guayaquil':
+                    return 'Que maaas nanooos'
+            default:
+                    return 'Buenas tardes';
+
+        }
+
+    }
+    @Post('/registroComida')
+    registroComida(@Body() parametrosCuerpo, @Response() response){ // si no voy a utilizar el request es mejor borrarlo
+        const cantidad= Number(parametrosCuerpo.cantidad)
+        if(cantidad>1){
+            response.set('Preio', 'Guatita')
+            return response.send({mensaje: 'Registro creado'});
+        }else{
+
+            return response.status(400).send({mensaje:"Error,no envia mensaje", error: 400})
+        }
+        return 'OK'
+    }
+    @Get('/semilla')
+    semilla(@Request() request){
+        console.log(request.cookies)
+
+        const cookies=!request.cookie
+        return 'Ok'
+    }
+
 }
-const json=[
-  {
-    Nombre: "Sofia",
-    Key : "value ",
-    "edad" : any,
-    "sueldo:": 10.21,
-    "casado": false,
-    "hijos": ["Micky ", 1,1.01, null,{
-      "nombre": "Micky Guerrero"
-    }]
-  }
-];
-let objeto: any ={
-  propiedad: 'valor',
-  propiedadDos: 'valor2'
-}
+
+let objeto:any = {
+    propiedad : 'valor'
+};
 objeto.propiedad
+//*******aniadir propiedad a un objeto
+//1era forma
+objeto.propiedad2='valor2';//debo definir el objeto como any 1ero
+//2da forma
+objeto['propiedad3']='valor3'
 
-objeto.propiedad3= 'valor3';
-objeto['propiedadTres']= 'valor3';
-delete objeto.propiedadTres;
-objeto.propiedadTres= undefined;
+//*******eliminar propiedad
+//peligrosa
+delete objeto.propiedad3;
+
+//segura
+objeto.propiedad3=undefined;
+
+
+
+const json=[
+    {
+        "llave":"valor",
+        "nombre":"Cesar",
+        "edad":23,
+        "sueldo":30.5,
+        "booleano":false,
+        "nulo":null,
+        "String":"nada",
+        "mascotas":["String",23,23.4,null,false,{"nombre":"cachetes"}]
+
+    }
+];
 
 
 
