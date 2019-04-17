@@ -1,4 +1,4 @@
-import {Controller, Get, Post, HttpCode, Put, Delete, Headers, Query} from '@nestjs/common';
+import {Controller, Get, Post, HttpCode, Put, Delete, Headers, Query, Param, Body, Request, Response} from '@nestjs/common';
 import { AppService } from './app.service';
 
 //http:ip:puerto/segmentoInicial/segmentoInicial
@@ -109,6 +109,39 @@ export class AppController {
         }else{
 
         }
+    }
+    @Get('/ciudad/:ciudad')
+    ciudad(@Param() parametrosRuta){
+        parametrosRuta.ciudad='s'
+        switch(parametrosRuta.ciudad.toLowerCase()) {
+            case 'quito':
+                     return 'Que fueff'
+            case 'guayaquil':
+                    return 'Que maaas nanooos'
+            default:
+                    return 'Buenas tardes';
+
+        }
+
+    }
+    @Post('/registroComida')
+    registroComida(@Body() parametrosCuerpo, @Response() response){ // si no voy a utilizar el request es mejor borrarlo
+        const cantidad= Number(parametrosCuerpo.cantidad)
+        if(cantidad>1){
+            response.set('Preio', 'Guatita')
+            return response.send({mensaje: 'Registro creado'});
+        }else{
+
+            return response.status(400).send({mensaje:"Error,no envia mensaje", error: 400})
+        }
+        return 'OK'
+    }
+    @Get('/semilla')
+    semilla(@Request() request){
+        console.log(request.cookies)
+
+        const cookies=!request.cookie
+        return 'Ok'
     }
 
 }
