@@ -1,203 +1,258 @@
-import {Controller, Get, Post, HttpCode, Put, Delete, Headers, Query, Param, Body, Request, Response} from '@nestjs/common';
-import { AppService } from './app.service';
+import {
+    Controller,
+    Get,
+    HttpCode,
+    Post,
+    Put,
+    Delete,
+    Headers,
+    Query,
+    Param,
+    Body,
+    Request,
+    Response
+} from '@nestjs/common';
+import {AppService} from './app.service';
 
-//http:ip:puerto/segmentoInicial/segmentoInicial
-//@Controller(Segemento)
-//el segmento Accion se pone en cada método
+
+import * as Joi from '@hapi/joi';
+
+// const Joi = require('@hapi/joi');
 
 
+// http://192.168.1.10:3000/segmentoInicial/segmentoAccion
+// http://192.168.1.10:3000/mascotas/crear
+// http://192.168.1.10:3000/mascotas/borrar
+// @Controller(segmentoInicial)
 @Controller('/api')
 export class AppController {
-    constructor(private readonly appService: AppService) { }
+    constructor(private readonly appService: AppService) {
+    }
 
-    /* @Get('/helloWorld')
-     getHello(): string {
-       return this.appService.getHello();
-     }*/
-    //cuando se hace cambio en la logica del servidor se debe reiniciar el servidor
-    //para ello se puede usar npm run start:dev
+    // @Controller(segmentoAccion)
+    @Get('/hello-world')  // METODO HTTP
+    helloWorld(): string {
+        return 'Hello world';
+    }
 
-    /* @Post()//alt+enter para importar arriba directamente
-     @HttpCode(205)
-     postHello() {
-       return 'Hola mundo en post';
-     }*/
-
-    /*Segmento inicial*/
-//segmento a: GET: 'hello-world
-    //segmento a: POST: 'HOLA-MUNDO'
-    // put , delete
-
-    @Get('/hola-mundo')
-    holaMundo(){
+    // POST http://localhost:3000/api
+    @Post('/hola-mundo')  // METODO HTTP
+    holaMundo() {
         return 'Hola mundo';
     }
 
-    @Post('/hello-world')
-    helloWorld(){
-        return 'Hello world';
-    }
-    @Put('/salut-monde')
-    putBonJour(){
-        return 'salut-monde';
+    @Put('/salut-monde')  // METODO HTTP
+    salutMonde() {
+        return 'Salut monde';
     }
 
-    @Delete('/ola-mundo')
-    olaMundo(){
-        return 'ola mundo';
+    @Delete('/ola-mundo')  // METODO HTTP
+    olaMundo() {
+        return 'Olá mundo';
     }
 
-//un decorador es la ejecucion de una funcion
-    @Get('/adivina')
-    adivina(@Headers() headers){ // parametro de un metodo de una clase, la clase headers usar la cabecera de nestjs, verificar si está importado, con esto tengo acceso a las cabeceras
-        //estoy usando el decorador @Headers para el parametro headers
 
-        const numeroRandom=Math.round(Math.random()*10)
-        //return numeroRandom;// en javascrip no existen enteros, son numeros y ya
-        console.log('Headers: ',headers);
-        // return headers.alv
-        const numeroCabecer=Number(headers.numero)
-        if(numeroCabecer ==numeroRandom ){
-            return 'ok'
-        }else{
-            return ':('
+    @Get('/adivina')  // METODO HTTP
+    adivina(@Headers() headers): string {
+        console.log('Headers: ', headers);
+        const numeroRandomico = Math.round(Math.random() * 10);
+        const numeroDeCabecera = Number(headers.numero);
+
+        if (numeroDeCabecera == numeroRandomico) {
+            return 'Ok';
+        } else {
+            return ':(';
         }
 
 
-        //parametros de clave y valor (le indicamos cómo va mandar los datos el cliente)
-        //?llave=valor&llave2=valor2
-
-
-
-
-
-
     }
 
-    //JSON es la notacion de objetos en JS, un archivo json no puede estar vacio, es usado porque es ligero y facil de entender
-    //abosultamente todas las llaves deben estar entre comillas DOBLES, estandar JSON (Java Script Object Notation)
-    //todos los string en JSON tienen comillas dobles
-    //en los archivos JSON no existen undefined
-    //un archivo JSON soporta objetos JSON y arreglos JSON
-    /**
-     *
-     *
-     *
-     *
-     *
-     */
-
-
-
-    /*var nombre:string='Cesar' //String
-         var edad:number=20 //number
-         var sueldo=120.50 //number
-         var casado=false//boolean
-         var hijos=null//null
-         var alas=undefined//undefined*/
-
-
-    //usar let en lugar de var
-    //para variables usar const (variable constante)
-
-
+    // ?llave=valor&llave2=valor2
     @Post('/consultar')
-    consultar(@Query() queryParams){
-        console.log(queryParams)
-        if(queryParams.nombre){
-            return 'hola sofi'
-        }else{
-
+    consultar(@Query() queryParams) {
+        console.log(queryParams);
+        if (queryParams.nombre) {
+            return `Hola ${queryParams.nombre}`
+        } else {
+            return 'Hola extraño'
         }
     }
-    @Get('/ciudad/:ciudad')
-    ciudad(@Param() parametrosRuta){
-        parametrosRuta.ciudad='s'
-        switch(parametrosRuta.ciudad.toLowerCase()) {
+
+    @Get('/ciudad/:idCiudad')
+    ciudad(@Param() parametrosRuta) {
+        switch (parametrosRuta.idCiudad.toLowerCase()) {
             case 'quito':
-                     return 'Que fueff'
+                return 'Que fueff';
             case 'guayaquil':
-                    return 'Que maaas nanooos'
+                return 'Que maah ñañoshh';
             default:
-                    return 'Buenas tardes';
+                return 'Buenas tardes';
+        }
+    }
 
+    @Post('registroComida')
+    registroComida(
+        @Body() parametrosCuerpo,
+        @Response() response
+    ) {
+        if (parametrosCuerpo.nombre && parametrosCuerpo.cantidad) {
+            const cantidad = Number(parametrosCuerpo.cantidad);
+            if (cantidad > 1) {
+                response.set('Premio', 'Fanesca');
+            }
+            return response.send({mensaje: 'Registro Creado'});
+        } else {
+            return response.status(400)
+                .send({
+                    mensaje: 'ERROR, no envia nombre o cantidad',
+                    error: 400
+                });
         }
 
     }
-    @Post('/registroComida')
-    registroComida(@Body() parametrosCuerpo, @Response() response){ // si no voy a utilizar el request es mejor borrarlo
-        const cantidad= Number(parametrosCuerpo.cantidad)
-        if(cantidad>1){
-            response.set('Preio', 'Guatita')
-            return response.send({mensaje: 'Registro creado'});
-        }else{
 
-            return response.status(400).send({mensaje:"Error,no envia mensaje", error: 400})
-        }
-        return 'OK'
-    }
     @Get('/semilla')
-    semilla(@Request() request){
-        console.log(request.cookies)
+    semilla(
+        @Request() request,
+        @Response() response
+    ) {
+        console.log(request.cookies);
+        const cookies = request.cookies; // JSON
 
-        const cookies=!request.cookie
-        return 'Ok'
+        const esquemaValidacionNumero = Joi
+            .object()
+            .keys({
+                numero: Joi.number().integer().required()
+            });
+
+        const objetoValidacion = {
+            numero: cookies.numero
+        };
+        const resultado = Joi.validate(objetoValidacion,
+            esquemaValidacionNumero);
+
+        if (resultado.error) {
+            console.log('Resultado: ', resultado);
+        } else {
+            console.log('Numero valido');
+        }
+        const cookieSegura= request.signedCookies.fechaServidor;
+        if(cookieSegura){
+            console.log('cookies segura');
+        }else{
+            console.log('cookie no valida')
+        }
+        if (cookies.micookie) {
+
+            const horaFechaServidor = new Date();
+            const minutos = horaFechaServidor.getMinutes();
+            horaFechaServidor.setMinutes(minutos + 1);
+
+            response.cookie(
+                'fechaServidor',      // NOMBRE (key)
+                new Date().getTime(),  // VALOR  (value)
+                {    // OPCIONES
+                    expires: horaFechaServidor
+                }
+            );
+
+            return response.send('ok');
+        } else {
+            return response.send(':(');
+        }
+
     }
+
+
+    // js -> ts
+
+
+    /*
+    const nombre: string = 'Adrian'; // string
+    const edad = 29;  // number
+    const sueldo = 1.20;  // number
+    const casado = false;  // boolean
+    const hijos = null;  // null
+    const alas = undefined;  // undefined
+    */
+
+
+    /*
+    * Segmento inicial: /api
+    * 1) Segmento Accion: GET 'hello-world' -> 'Hello world'
+    * 2) Segmento Accion: POST 'hola-mundo' -> 'Hola mundo'
+    * 3) Segmento Accion: PUT '...' -> '....'
+    * 4) Segmento Accion: DELETE '..' -> '....'
+    * */
+
 
 }
 
-let objeto:any = {
-    propiedad : 'valor'
-};
-objeto.propiedad
-//*******aniadir propiedad a un objeto
-//1era forma
-objeto.propiedad2='valor2';//debo definir el objeto como any 1ero
-//2da forma
-objeto['propiedad3']='valor3'
-
-//*******eliminar propiedad
-//peligrosa
-delete objeto.propiedad3;
-
-//segura
-objeto.propiedad3=undefined;
-
-
-
-const json=[
-    {
-        "llave":"valor",
-        "nombre":"Cesar",
-        "edad":23,
-        "sueldo":30.5,
-        "booleano":false,
-        "nulo":null,
-        "String":"nada",
-        "mascotas":["String",23,23.4,null,false,{"nombre":"cachetes"}]
-
-    }
-];
-
-
 
 /*
-@nombreDecoradorClase //antes de instaciar clases, metodos, atributos. Un decorador es una función, Se ejecuta antes de crearse. DECORADPR->Funcion
-class clase{
-  @decoradorAtributo
-  public publico;
-  private privado;
-  protected protegido;
-  constructor(@parametro()publ,priv,prot){
-    this.publico=publ;
-    this.privado=priv;
-    this.protegido=prot;
+@NombreDecoradorClase() // Decorador -> FUNCION
+class usuario{
+  @Atributo() // Decorador
+  atributoPublico; // Public
+  private atributoPrivado;
+  protected atributoProtegido;
+  constructor(@Parametro() atributoPublico,
+              @OtroParametro() atributoPrivado,
+              @OtroOtroParametro() atributoProtegido){
+    this.atributoPublico = atributoPublico;
+    this.atributoPrivado = atributoPrivado;
+    this.atributoProtegido = atributoProtegido;
   }
-  @metodoA
-  public metodopublico(){
-  }
-    @metodob
-  private metodoprovado(){}
-    @metodoC //und decorador es una función que se ejecuta antes de algo(clases,parametros,metodoso,atributos)
-  protected metodoprotected(){}
-}*/
+  @MetodoA()
+  public metodoPublico(@ParametroA() a){}
+  @MetodoB()
+  private metodoPrivado(){}
+  protected metodoProtegido(){}
+}
+*/
+
+const json = [
+    {
+        llave: 'valor',
+        "key": "value",
+        'nombre': "Adrian\"\"",
+        edad: 29,
+        sueldo: 10.21,
+        casado: false,
+        hijos: null,
+        mascotas: [
+            "cachetes",
+            1,
+            1.01,
+            false,
+            null,
+            {
+                "nombre": "cachetes"
+            },
+        ],
+    },
+];
+
+// JS -> JSON
+
+let adrian = 'Adrian';
+
+// TS
+
+let vicente: any = 'Vicente';
+vicente = 1;
+
+let objeto: any = {
+    propiedad: 'valor',
+    propiedadDos: 'valor2'
+};
+objeto.propiedad  // valor
+objeto.propiedadDos  // valor2
+
+// Agregar propiedades a un objeto
+objeto.propiedadTres = 'valor3';
+objeto['propiedadTres'] = 'valor 3';
+delete objeto.propiedadTres; // -> destruir
+objeto.propiedadTres = undefined; // -> destruir
+
+
