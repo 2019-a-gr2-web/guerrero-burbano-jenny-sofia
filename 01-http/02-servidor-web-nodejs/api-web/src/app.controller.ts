@@ -162,7 +162,29 @@ export class AppController {
         }
 
     }
+	
+	
+	@Get('/deber')
+        deber(@Response() response,@Request() request){
+            
+			console.log(request.cookies)
+			/*response.cookie(
 
+                'nombreUsuario',  'Sofia'
+
+            );*/
+            return response.send(
+                {
+                    nombreUsuario:request.cookies
+
+                    resultado: 2
+                }
+            )
+
+    }
+
+
+	
 
     // js -> ts
 
