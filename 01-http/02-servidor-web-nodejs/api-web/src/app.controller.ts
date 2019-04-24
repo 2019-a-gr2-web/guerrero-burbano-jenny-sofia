@@ -16,6 +16,7 @@ import {AppService} from './app.service';
 
 
 import * as Joi from '@hapi/joi';
+import {response} from "express";
 
 // const Joi = require('@hapi/joi');
 
@@ -173,14 +174,24 @@ export class AppController {
                 'nombreUsuario',  'Sofia'
 
             );*/
-            return response.send(
-                {
-                    nombreUsuario:request.cookies
+            if(request.cookies) {
 
-                    resultado: 2
-                }
-            )
 
+                return response.send(
+                    {
+                        nombreUsuario: request.cookies.nombreCookie,
+
+                        resultado: 2
+                    }
+                )
+            }else{
+
+            }
+
+    }
+    @Get('/inicio')
+    inicio(@Response() res){
+        return res.render('views')
     }
 
 
