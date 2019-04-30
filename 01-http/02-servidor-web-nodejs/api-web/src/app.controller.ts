@@ -170,6 +170,51 @@ export class AppController {
 
     }
 
+    @Get('inicio')
+    inicio(@Response() res) {
+
+        const arregloNumerosSome = [1, 2, 3, 4, 5, 6]
+        const valorDondeEmpiezaCalculo = 100
+        //si el numero es menor a 4 le sumamos su 10% y le sumamos el 5
+        // si es mayor o igual a 4
+        //sumamos el 15% y sumamos el 3
+        arregloNumerosSome.some(
+            (valorActual) => {
+                return valorActual < 2
+            }
+        );
+        const arreglores = arregloNumerosSome.reduce( //ai
+            (acumulado, valorActual) => {
+               return acumulado - valorActual
+            }, valorDondeEmpiezaCalculo
+        );
+        const arregloEjercicio=[1,2,3,4,5,6]
+        arregloEjercicio.map(
+            (valorActual)=>{
+                return valorActual+10
+            }
+        ).filter(
+            (valorActual)=>{
+                return valorActual > 15;
+            }
+        ).some(
+            (valorActual)=>{
+                return valorActual>30
+            }
+        )
+
+
+
+        console.log(arreglores)
+        // me devuelve TRUE
+    }
+    @Get('inicio2')
+    inicio2(@Response() res) {
+
+        return res.render('inicio');
+        // me devuelve TRUE
+    }
+
 
     // js -> ts
 
