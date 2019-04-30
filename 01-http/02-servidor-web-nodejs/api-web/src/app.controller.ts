@@ -208,6 +208,12 @@ export class AppController {
         console.log(arreglores)
         // me devuelve TRUE
     }
+    @Get('inicio2')
+    inicio2(@Response() res) {
+
+        return res.render('inicio');
+        // me devuelve TRUE
+    }
 
 
     // js -> ts
