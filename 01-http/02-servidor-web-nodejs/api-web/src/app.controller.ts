@@ -211,7 +211,13 @@ export class AppController {
     @Get('inicio2')
     inicio2(@Response() res) {
 
-        return res.render('inicio');
+        return res.render('inicio', {estaVivo: false});
+        // me devuelve TRUE
+    }
+    @Get('peliculas')
+    peliculas(@Response() res) {
+
+        return res.render('peliculas/inicio', { });
         // me devuelve TRUE
     }
 

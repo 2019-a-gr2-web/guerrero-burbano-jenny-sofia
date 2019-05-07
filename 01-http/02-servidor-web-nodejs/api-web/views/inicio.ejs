@@ -1,4 +1,4 @@
-<!--  //declarar variable // no tipado -->
+  //declarar variable // no tipado
 <% const nombre='Sofi' %>
 <% const arreglo=[1,2,3,4,5,6]; %>
 <% const objeto={nombre:'Sofia'}; %>
@@ -7,8 +7,13 @@
 <% arreglo.forEach((valorActual)=>{ %>
    <li>Numero: <%= valorActual%> </li>
 <% })%>
-</ol>
 
+</ol>
+<% if(estaVivo){%>
+    <h1>esta vivo</h1>
+<% }else{%>
+    <h1>murio:(</h1>
+<%}%>
 
 
 
