@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4178c94f-8488-4c9e-9f47-fa14fb30f1f5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/publico/datos/User manual (PDF, English).lnk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/inicio.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/estilos.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-http/01-servidor-web-estatico/pdf/LEY-DE-TURISMO.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/publico/datos/LEY-DE-TURISMO.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/inicio.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/inicio.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/inicio.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/inicio.ejs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,7 +21,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
+            <state relative-caret-position="102">
               <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -40,16 +35,16 @@
         <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/inicio.ejs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="1" column="25" lean-forward="true" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+              <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/inicio.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
+            <state>
+              <caret selection-end-line="68" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -57,7 +52,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
+            <state relative-caret-position="119">
               <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
@@ -69,10 +64,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="217" column="32" lean-forward="true" selection-start-line="217" selection-start-column="32" selection-end-line="217" selection-end-column="32" />
+            <state relative-caret-position="2073">
+              <caret line="225" column="44" selection-start-line="225" selection-start-column="44" selection-end-line="225" selection-end-column="44" />
               <folding>
                 <element signature="e#0#174#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/estilos.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="40" column="25" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+              <folding>
+                <element signature="n#style#0;n#h1#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -95,14 +102,15 @@
       <list>
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/view/inicio.ejs" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/l.js" />
-        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/inicio.ejs" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/inicio.ejs" />
+        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts" />
+        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/estilos.ejs" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="width" value="977" />
     <option name="height" value="1038" />
@@ -113,7 +121,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -150,12 +157,22 @@
             <path>
               <item name="guerrero-burbano-jenny-sofia" type="b2602c69:ProjectViewProjectNode" />
               <item name="guerrero-burbano-jenny-sofia" type="462c0819:PsiDirectoryNode" />
+              <item name="01-http" type="462c0819:PsiDirectoryNode" />
+              <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
+              <item name="api-web" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="peliculas" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="guerrero-burbano-jenny-sofia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="guerrero-burbano-jenny-sofia" type="462c0819:PsiDirectoryNode" />
               <item name="Controlador" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -172,7 +189,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="ts.external.directory.path" value="C:\Users\sofi-\Documents\GitHub\guerrero-burbano-jenny-sofia\01-http\02-servidor-web-nodejs\api-web\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="D:\GitHub\guerrero-burbano-jenny-sofia\01-http\02-servidor-web-nodejs\api-web\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -211,7 +228,8 @@
       <workItem from="1556411455119" duration="10903000" />
       <workItem from="1556599001445" duration="560000" />
       <workItem from="1556651974043" duration="6208000" />
-      <workItem from="1557256158081" duration="6367000" />
+      <workItem from="1557256158081" duration="7481000" />
+      <workItem from="1557343008336" duration="5855000" />
     </task>
     <task id="LOCAL-00001" summary="Ejemplos de operadores">
       <created>1556657194836</created>
@@ -224,7 +242,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35170000" />
+    <option name="totallyTimeSpent" value="42139000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -236,10 +254,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-6" y="0" width="781" height="830" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24520819" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11827957" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -252,14 +270,14 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2735294" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2752976" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.6236559" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.49865592" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -268,11 +286,11 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.31470588" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.36607143" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.2767857" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -288,36 +306,9 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/l.js" />
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="217" column="32" lean-forward="true" selection-start-line="217" selection-start-column="32" selection-end-line="217" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#174#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/inicio.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="25" lean-forward="true" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
+        <state relative-caret-position="102">
           <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
@@ -326,10 +317,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/inicio.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/inicio.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
+        <state>
+          <caret selection-end-line="68" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2073">
+          <caret line="225" column="44" selection-start-line="225" selection-start-column="44" selection-end-line="225" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#174#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/peliculas/estilos.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="40" column="25" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+          <folding>
+            <element signature="n#style#0;n#h1#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -220,6 +220,12 @@ export class AppController {
         return res.render('peliculas/inicio', { });
         // me devuelve TRUE
     }
+    @Get('estilos')
+    estilos(@Response() res) {
+
+        return res.render('peliculas/estilos', { });
+        // me devuelve TRUE
+    }
 
 
     // js -> ts
