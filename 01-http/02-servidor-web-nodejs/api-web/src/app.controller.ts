@@ -26,6 +26,7 @@ import * as Joi from '@hapi/joi';
 // @Controller(segmentoInicial)
 @Controller('/api')
 export class AppController {
+    arregloUsuarios = [];
     constructor(private readonly appService: AppService) {
     }
 
