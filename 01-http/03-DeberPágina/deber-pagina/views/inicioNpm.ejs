@@ -20,6 +20,10 @@
             height: 4px;
             background-image: linear-gradient(139deg, #fb8817, #ff4b01, #c12127, #e02aff);
         }
+        .border2 {
+            height: 8px;
+            background-image: linear-gradient(139deg, #fb8817, #ff4b01, #c12127, #e02aff);
+        }
 
         .pfila1 {
             padding-top: 14px;
@@ -151,6 +155,7 @@
             background-color: black;
             color: white;
             box-shadow: 8px 8px 0 rgba(128,83,35,.2);
+
         }
         .fila6{
             margin-top: -45px;
@@ -180,6 +185,8 @@
         .fila7{
             height: 610px;
             padding: 30px;
+            background-color: #FDFBF7;
+
         }
         .fila7 h2{
             text-decoration: underline;
@@ -203,6 +210,12 @@
             color: white;
             box-shadow: 8px 8px 0 rgba(128,83,35,.2);
         }
+        .fila8{
+            height: 650px;
+            background-color: #FDFBF7;
+            -webkit-clip-path: polygon(0 74%, 0 0, 100% 0, 100% 72%, 50% 100%);
+
+        }
         .fila8 h5{
             font: bold 18px "Arial Black";
             color: #68120E;;
@@ -212,12 +225,106 @@
             font-size: 20px;
         }
         .fila9{
-            height: 1900px;
-            background-color: #FDFBF7;
-            -webkit-clip-path: polygon(0 0,100% 0,100% 90%,50% 100%,0 90%);
+            height: 640px;
+            padding-top: 100px ;
+
         }
+        .fila9 h2{
+            font:  2.95rem "Arial Black";
+        }
+        .fila9 p{
+
+            padding-left: 45px;
+            padding-top: 55px;
+            font-size: 19px;
+        }
+        .colum1fila9{
+            padding: 35px;
+            padding-left: 155px;
+            padding-right: 185px;
+        }
+        .colum2fila9{
+            padding-top: 85px;
+        }
+        .titulofila8{
+            padding: 25px;
+            font: bold 25px "Arial Black";
+            color: black;
+        }
+        .cuadro{
+            height: 240px;
+            width: 550px;
+
+            margin-top: 25px;
+            margin-bottom: 45px;
+            margin-left: 100px;
+            margin-right: 84px;
+            border-style: groove;
+            margin-top: -5px;
+            border: solid 1px #ccc;
+            box-shadow: 0px 5px 18px -10px #8e8e8e;
+            border-top-color: white;
+            background-color: white;
 
 
+        }
+        .cuadroSm{
+            height: 150px;
+            width: 490px;
+            border: solid 1px #ffdfdf;
+            background-color: white;
+            padding: 100px;
+            margin-top: 10px;
+            margin-left: 30px;
+
+        }
+        .titulosm{
+            width: 400px;
+            font-size: 24px;
+            margin-top: -85px;
+            margin-left: -40px;
+            color:#ED1C24;
+        }
+        .cuadroSm p{
+            margin-top: 10px;
+            margin-left: -30px;
+            font-size: 18px;
+            color: #777;
+        }
+        .fila10{
+            height: 580px;
+            background-color: white;
+        }
+        .fila10 h3{
+            color: black;
+            margin-top: 90px;
+            font: bold 35px "Arial Black";
+        }
+        .fila9 h3{
+            color: black;
+            margin-top: 70px;
+            font: bold 35px "Arial Black";
+        }
+        .fila10 h1{
+            color: #fb3e44;
+            margin-top: 90px;
+            font: bold 18px "Arial Black";
+            margin-left: 40px;
+            margin-bottom: 20px;
+        }
+        .fila10 p{
+            color: #777;
+            font: bold 35px "Arial";
+        }
+        .fila10 li{
+            margin-bottom: 19px;
+            font:  21px "Arial";
+            color: #777;
+
+        }
+     .f10{
+         padding-left: 70px;
+     }
 
 
     </style>
@@ -337,7 +444,7 @@
         </div>
 
     </div>
-    <div class="btnfila4 text-center">
+    <div class=" col-md-12 btnfila4 text-center">
         <button>Create an org</button>
     </div>
 </div>
@@ -349,15 +456,20 @@
     <button class="botonfila6">Learn more -></button>
 </div>
 <div class="fila7 text-center">
+    <div>
     <img  src="/imagenes/fila7.png" alt="npm word" style="height: 300px">
     <h2>Javascript.Enterprise grade</h2>
     <p>Bring your development under one roof, and get a handle on your company’s open source footprint with our secure, single-tenant, managed service. npm Enterprise empowers developers to do what they do best while providing you with industry-leading administrative capabilities. Reduce risk while reducing friction.
 
     </p>
+    </div>
+
+
+
 </div>
 <div class="fila8">
     <div class="col-md-3 text-left f8colum1">
-        <img  src="/imagenes/fila4img1.png" alt="npm word" style="height: 45px">
+        <img  src="/imagenes/fila8img1.png" alt="npm word" style="height: 45px">
         <h5>Security expertise</h5>
         <br>
 
@@ -397,12 +509,118 @@
 
 
     </div>
+
     <div class=" text-center col-md-12">
         <button class="btnfila8">Contact sales</button>
     </div>
 
 </div>
 <div class="fila9">
+    <div class="col-md-12 text-center">
+    <h2>Serving 500 of the Fortune 500 (and everyone else)</h2>
+    </div>
+    <div class="col-md-6 text-left colum1fila9">
+    <p>
+        Every company with a website uses npm, from small development shops to the largest enterprises in the world.
+
+
+    </p>
+
+        <p>
+            Join the companies taking their software development to the next level with industry-leading offerings from npm, Inc., the center of the modular software revolution.
+        </p>
+    </div>
+    <div class="col-md-6 text-center colum2fila9">
+        <img  src="/imagenes/fila9.png" alt="npm word" style="height: 230px">
+    </div>
+
+</div>
+<div class="fila8">
+    <div class="col-md-12 titulofila8 text-center">
+        <h2>npm news</h2>
+    </div>
+    <div class="col-md-6 text-center">
+        <div class="cuadro">
+
+            <div class="cuadroSm text-left">
+                <div class="titulosm">
+                    <span class="	glyphicon glyphicon-chevron-left"></span> our most recent press mention <span class="glyphicon glyphicon-chevron-right"></span>
+                </div>
+                <p>
+                    A collaboration hopes to introduce a new generation of technology leaders from diverse backgrounds to an industry where . . .
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 text-center">
+        <div class="cuadro">
+
+            <div class="cuadroSm text-left">
+                <div class="titulosm">
+                    <span class="	glyphicon glyphicon-chevron-left"></span> our most recent blog post <span class="glyphicon glyphicon-chevron-right"></span>
+                </div>
+                <p>
+                    A collaboration hopes to introduce a new generation of technology leaders from diverse backgrounds to an industry where . . .
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="fila9 text-center">
+    <h3>Try npm for free</h3>
+    <div class=" text-center col-md-12">
+        <button class="btnfila8">Create an account</button>
+    </div>
+</div>
+<div class="fila10">
+    <div class="col-md-4 text-left f10">
+        <h1>HELP</h1>
+        <div class="8list text-left">
+            <ul class="list p10" style="list-style-type: none;">
+                <li>Documentation</li>
+                <li>Resources</li>
+                <li>Registry Status</li>
+                <li>Report Issues</li>
+                <li>npm Community Site</li>
+                <li>Security</li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="col-md-4 text-left f10">
+        <h1>HELP</h1>
+        <div class="8list text-left">
+            <ul class="list p10" style="list-style-type: none;">
+                <li>About npm, Inc</li>
+                <li>JavaScriptSurvey.com</li>
+                <li>Events</li>
+                <li>Jobs</li>
+                <li>Press</li>
+                <li>npm Weekly</li>
+                <li>Blog</li>
+                <li>Twitter</li>
+                <li>GitHub</li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="col-md-4 text-left f10">
+        <h1>HELP</h1>
+        <div class="8list text-left">
+            <ul class="list p10" style="list-style-type: none;">
+                <li>Documentation</li>
+                <li>Resources</li>
+                <li>Registry Status</li>
+                <li>Report Issues</li>
+                <li>npm Community Site</li>
+                <li>Security</li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+<div class="border2">
 
 </div>
 </body>
