@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"-->
+<!--          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+        .fila1 {
+
+        }
+
+        .border {
+            height: 4px;
+            background-image: linear-gradient(139deg, #fb8817, #ff4b01, #c12127, #e02aff);
+        }
+        .border2 {
+            height: 8px;
+            background-image: linear-gradient(139deg, #fb8817, #ff4b01, #c12127, #e02aff);
+        }
+
+        .pfila1 {
+            padding-top: 14px;
+            padding-left: 33px;
+        }
+        .navbar.navbar.navbar-default{
+            background-color: white;
+            font-size: 14px;
+
+            color: #000;
+            letter-spacing: 0.015625em;
+
+        }
+        .img{
+            width: 900px;
+        }
+        .fila2{
+            height: 45px;
+            margin-top: -5px;
+            border:solid 1px #ccc;
+
+            box-shadow: 0px 5px 18px -10px #8e8e8e;
+            border-top-color: white ;
+
+
+        }
+        .input{
+            height: 40px;
+            border-color: rgba(0,0,0,0.05);
+            background-color: rgba(0,0,0,0.05);
+            border:1px solid transparent;
+            width: 67vw;
+        }
+        .search{
+            background-color: #fb3e44;
+            color: white;
+            padding: 12px;
+            margin-left: -4px;
+            padding-right: 31px;
+        }
+        .boton{
+            height: 35px;
+            margin-left: -65px;
+            margin-top: 3px;
+            width: 64px;
+            background-color: white;
+            border-style: solid;
+            border-width: 1px;
+            border-color: black;
+        }
+        .login{
+            color: #6c6f6e;
+            margin-left: 11px;
+        }
+        .fila3{
+            height: 65px;
+            margin-top: 4px;
+            background-color: #fbf4f4;
+            /*background:#ff6600;*/
+
+            height:628px;
+
+
+        }
+        .fila3 h1{
+
+            color: black;
+            font: bold 76px "Arial Black";
+
+        }
+        .fila3_espacio{
+            height: 85px;
+        }
+        .fila3 p{
+            font-size: 25px;
+            padding-left: 385px;
+            padding-right: 385px;
+            padding-top: 25px;
+            padding-bottom: 17px;
+        }
+        .boton1{
+            height: 65px;
+            width: 270px;
+            margin: 30px;
+            border: none;
+            background-color: #fb3e44;
+            font: bold 16px "Arial Black";
+            color: white;
+        ;
+        }
+        .boton2{
+            height: 65px;
+            width: 270px;
+            border: none;
+            background-color: white;
+            font: bold 16px "Arial Black";
+            color: black;
+        }
+        .fila4{
+            height: 628px;
+
+        }
+        .fila4 p{
+            padding-left: 350px;
+            padding-right: 350px;
+        }
+        .fila5{
+            height: 628px;
+            padding-top: 25px;
+        }
+        .fila5text{
+            padding-top: 20px;
+        }
+
+        .colum1 h5{
+            font: bold 14px "Arial Black";
+            color:#ED1C24;
+        }
+        .fila5text p{
+            padding-left: 45px;
+            padding-right: 45px;
+            padding-top: 20px;
+        }
+        .btnfila4 button{
+            margin-top: 45px;
+            font: bold 24px "Arial Black";
+            padding: 35px;
+            width: 448px;
+            background-color: black;
+            color: white;
+            box-shadow: 8px 8px 0 rgba(128,83,35,.2);
+
+        }
+        .fila6{
+            margin-top: -45px;
+            font-size: 20px;
+            height: 570px;
+            background-image: url(https://static.npm.red/attachments/cjsdqox9k0kgel1beo12x4x6e-line-final.full.png), radial-gradient(rgb(88, 15, 11) 22%, rgb(18, 7, 7) 100%);
+            padding: 100px;
+            padding-left:259px;
+            padding-right: 259px;
+            color: #F1C131;
+
+        }
+        .fila6 p{
+            margin-top: 59px;
+        }
+        .botonfila6{
+            margin-top: 45px;
+            font: 20px "Arial Black";
+            padding: 15px;
+            width: 249px;
+            height: 70px;
+            border: none;
+            background-color: #F1C131;
+            color: #333;
+            box-shadow: 8px 8px 0 rgba(128,83,35,.2);
+        }
+        .fila7{
+            height: 610px;
+            padding: 30px;
+            background-color: #FDFBF7;
+
+        }
+        .fila7 h2{
+            text-decoration: underline;
+            text-decoration-color: rgba(251,82,40,.2);
+            font: bold 35px Arial;
+        }
+        .fila7 p{
+            padding-left: 210px ;
+            padding-right: 210px;
+            font: 18px Arial;
+        }
+        .f8colum1{
+            padding-left: 90px;
+        }
+        .btnfila8{
+            margin-top: 45px;
+            font: bold 24px "Arial Black";
+            padding: 20px;
+            width: 380px;
+            background-color: black;
+            color: white;
+            box-shadow: 8px 8px 0 rgba(128,83,35,.2);
+        }
+        .fila8{
+            height: 650px;
+            background-color: #FDFBF7;
+            -webkit-clip-path: polygon(0 74%, 0 0, 100% 0, 100% 72%, 50% 100%);
+
+        }
+        .fila8 h5{
+            font: bold 18px "Arial Black";
+            color: #68120E;;
+
+        }
+        .fila8 p{
+            font-size: 20px;
+        }
+        .fila9{
+            height: 640px;
+            padding-top: 100px ;
+
+        }
+        .fila9 h2{
+            font:  2.95rem "Arial Black";
+        }
+        .fila9 p{
+
+            padding-left: 45px;
+            padding-top: 55px;
+            font-size: 19px;
+        }
+        .colum1fila9{
+            padding: 35px;
+            padding-left: 155px;
+            padding-right: 185px;
+        }
+        .colum2fila9{
+            padding-top: 85px;
+        }
+        .titulofila8{
+            padding: 25px;
+            font: bold 25px "Arial Black";
+            color: black;
+        }
+        .cuadro{
+            height: 240px;
+            width: 550px;
+
+            margin-top: 25px;
+            margin-bottom: 45px;
+            margin-left: 100px;
+            margin-right: 84px;
+            border-style: groove;
+            margin-top: -5px;
+            border: solid 1px #ccc;
+            box-shadow: 0px 5px 18px -10px #8e8e8e;
+            border-top-color: white;
+            background-color: white;
+
+
+        }
+        .cuadroSm{
+            height: 150px;
+            width: 490px;
+            border: solid 1px #ffdfdf;
+            background-color: white;
+            padding: 100px;
+            margin-top: 10px;
+            margin-left: 30px;
+
+        }
+        .titulosm{
+            width: 400px;
+            font-size: 24px;
+            margin-top: -85px;
+            margin-left: -40px;
+            color:#ED1C24;
+        }
+        .cuadroSm p{
+            margin-top: 10px;
+            margin-left: -30px;
+            font-size: 18px;
+            color: #777;
+        }
+        .fila10{
+            height: 580px;
+            background-color: white;
+        }
+        .fila10 h3{
+            color: black;
+            margin-top: 90px;
+            font: bold 35px "Arial Black";
+        }
+        .fila9 h3{
+            color: black;
+            margin-top: 70px;
+            font: bold 35px "Arial Black";
+        }
+        .fila10 h1{
+            color: #fb3e44;
+            margin-top: 90px;
+            font: bold 18px "Arial Black";
+            margin-left: 40px;
+            margin-bottom: 20px;
+        }
+        .fila10 p{
+            color: #777;
+            font: bold 35px "Arial";
+        }
+        .fila10 li{
+            margin-bottom: 19px;
+            font:  21px "Arial";
+            color: #777;
+
+        }
+     .f10{
+         padding-left: 70px;
+     }
+
+
+    </style>
+</head>
+<body>
+<div class="border">
+
+</div>
+
+<nav class="navbar navbar navbar-default  ">
+    <div class="container-fluid pfila1">
+
+        <ul class="nav navbar-nav">
+
+            <li class="active"> <span class="glyphicon">&#xe005;</span></li>
+            <li class="active">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nascent Personality Manifestation</li>
+
+        </ul>
+      <div class="pull-right" style="margin-left: 25px">
+          <ul class="nav navbar-nav dos" >
+
+              <li class="active pull-right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Support&nbsp;&nbsp;&nbsp;</li>
+              <li class="active pull-right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Docs</li>
+              <li class="active pull-right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resources&nbsp;&nbsp;</li>
+              <li class="active pull-right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solutions</li>
+              <li class="active pull-right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Products</li>
+              <li class="active pull-right" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;npm Enterprise</li>
+
+          </ul>
+      </div>
+    </div>
+</nav>
+<div class="fila2">
+    <div class="col-md-1">
+        <ul class="nav navbar-nav col-md-1">
+            <li class="img">  <img  src="/imagenes/npm.png" alt="npm word" style="height: 35px"></li>
+            <li> </li>
+
+        </ul>
+    </div>
+    <div class="col-md-10">
+        <span style="height: 155px; background-color: rgba(0,0,0,0.05); padding: 12px; color: darkgrey;margin-right: -5px"><i  class="glyphicon glyphicon-search"></i></span>
+        <input class="input" style="" name="email" placeholder="Search packages">
+        <span class="search" style="" >Search</span>
+    </div>
+    <div class="col-md-1">
+        <button class="boton">Join</button>
+        <a class="login" href="">Log in</a>
+    </div>
+
+</div>
+
+
+<div class="fila3 text-center">
+    <div class="fila3_espacio">
+
+    </div>
+    <h1>
+        Build amazing things
+    </h1>
+
+    <div class="text-center">
+        <p>
+            Essential JavaScript development tools that help you go to market faster and build powerful applications using modern open source code.
+        </p>
+    </div>
+    <div>
+        <button class="boton1">See plans</button>
+        <button class="boton2">Join for free</button>
+    </div>
+
+</div>
+<div class="fila4">
+    <div class="text-center">
+        <img  src="/imagenes/fila4.png" alt="npm word" style="height: 450px">
+    </div>
+    <div class="text-center">
+        <p>npm is the tool used by over 11,000,000 JavaScript developers around the world. Your developers already use it. Your company depends on it. Create an Org and get more out of the tools your team already knows and loves.</p>
+    </div>
+</div>
+<div class="fila5">
+    <div class="col-md-3 text-center colum1">
+        <img  src="/imagenes/fila4img1.png" alt="npm word" style="height: 45px">
+        <h5>Zero configuration</h5>
+        <div class="text-left fila5text">
+
+            <p>
+                Create an org, add your team, and start collaborating. Nothing to configure, set up, or manage.
+            </p>
+        </div>
+    </div>
+    <div class="col-md-3 text-center colum1">
+        <img  src="/imagenes/fila4img2.png" alt="npm word" style="height: 45px">
+        <h5>Team management</h5>
+        <div class="text-left fila5text">
+            <p>
+                Control who has access to what modules within your team namespace using straightforward team management capabilities.
+            </p>
+        </div>
+    </div>
+    <div class="col-md-3 text-center colum1">
+        <img  src="/imagenes/fila4img3.png" alt="npm word" style="height: 45px">
+        <h5>Familiar features</h5>
+        <div class="text-left fila5text">
+            <p>
+                npm Orgs has 100% parity with all the public npm registry features your developers already use.
+            </p>
+        </div>
+    </div>
+    <div class="col-md-3 text-center colum1">
+        <img  src="/imagenes/fila4img4.png" alt="npm word" style="height: 45px">
+        <h5>npm audit</h5>
+        <div class="text-left fila5text">
+            <p>
+                Enjoy the security auditing features built into the npm client, a zero-friction way to make open source software safer.
+            </p>
+        </div>
+
+    </div>
+    <div class=" col-md-12 btnfila4 text-center">
+        <button>Create an org</button>
+    </div>
+</div>
+<div class="fila6 text-center">
+    <h1>
+        npm Enterprise
+    </h1>
+    <p>You need to get quality products to market fast but you also need enterprise-grade security and compliance. Speed up development while also upgrading to the most advanced tooling in JavaScript, from the trusted authorities on JavaScript package management.</p>
+    <button class="botonfila6">Learn more -></button>
+</div>
+<div class="fila7 text-center">
+    <div>
+    <img  src="/imagenes/fila7.png" alt="npm word" style="height: 300px">
+    <h2>Javascript.Enterprise grade</h2>
+    <p>Bring your development under one roof, and get a handle on your company’s open source footprint with our secure, single-tenant, managed service. npm Enterprise empowers developers to do what they do best while providing you with industry-leading administrative capabilities. Reduce risk while reducing friction.
+
+    </p>
+    </div>
+
+
+
+</div>
+<div class="fila8">
+    <div class="col-md-3 text-left f8colum1">
+        <img  src="/imagenes/fila8img1.png" alt="npm word" style="height: 45px">
+        <h5>Security expertise</h5>
+        <br>
+
+        <p>
+            npm is the central authority on JavaScript security. Automatically find and fix security vulnerabilities before they ever make it into production, with nothing to set up or install.
+        </p>
+
+    </div>
+    <div class="col-md-3 text-left f8colum1">
+        <img  src="/imagenes/fila8img2.png" alt="npm word" style="height: 45px">
+        <h5>De-duplicated development</h5>
+        <br>
+        <br>
+        <p>
+            npm’s search and distribution features have revolutionized the way developers collaborate. Unlimited namespaces allow your teams to easily share and manage their code.
+        </p>
+
+    </div>
+    <div class="col-md-3 text-left f8colum1">
+        <img  src="/imagenes/fila8img3.png" alt="npm word" style="height: 45px">
+        <h5>Access control</h5>
+        <br>
+
+        <p>
+            Single sign-on gives you total control of who has access to your system, allowing you to distribute permissions in a way that matches your company structure.
+        </p>
+
+    </div>
+    <div class="col-md-3 text-left f8colum1">
+        <img  src="/imagenes/fila8img4.png" alt="npm word" style="height: 45px">
+        <h5>Unrivaled support</h5>
+
+        <br>
+        <p>
+            npm, Inc. has scaled the npm registry to over 11 million people worldwide. Let us bring our operational expertise to you with best-in-class support for the tool your developers depend on.
+        </p>
+
+
+    </div>
+
+    <div class=" text-center col-md-12">
+        <button class="btnfila8">Contact sales</button>
+    </div>
+
+</div>
+<div class="fila9">
+    <div class="col-md-12 text-center">
+    <h2>Serving 500 of the Fortune 500 (and everyone else)</h2>
+    </div>
+    <div class="col-md-6 text-left colum1fila9">
+    <p>
+        Every company with a website uses npm, from small development shops to the largest enterprises in the world.
+
+
+    </p>
+
+        <p>
+            Join the companies taking their software development to the next level with industry-leading offerings from npm, Inc., the center of the modular software revolution.
+        </p>
+    </div>
+    <div class="col-md-6 text-center colum2fila9">
+        <img  src="/imagenes/fila9.png" alt="npm word" style="height: 230px">
+    </div>
+
+</div>
+<div class="fila8">
+    <div class="col-md-12 titulofila8 text-center">
+        <h2>npm news</h2>
+    </div>
+    <div class="col-md-6 text-center">
+        <div class="cuadro">
+
+            <div class="cuadroSm text-left">
+                <div class="titulosm">
+                    <span class="	glyphicon glyphicon-chevron-left"></span> our most recent press mention <span class="glyphicon glyphicon-chevron-right"></span>
+                </div>
+                <p>
+                    A collaboration hopes to introduce a new generation of technology leaders from diverse backgrounds to an industry where . . .
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 text-center">
+        <div class="cuadro">
+
+            <div class="cuadroSm text-left">
+                <div class="titulosm">
+                    <span class="	glyphicon glyphicon-chevron-left"></span> our most recent blog post <span class="glyphicon glyphicon-chevron-right"></span>
+                </div>
+                <p>
+                    A collaboration hopes to introduce a new generation of technology leaders from diverse backgrounds to an industry where . . .
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="fila9 text-center">
+    <h3>Try npm for free</h3>
+    <div class=" text-center col-md-12">
+        <button class="btnfila8">Create an account</button>
+    </div>
+</div>
+<div class="fila10">
+    <div class="col-md-4 text-left f10">
+        <h1>HELP</h1>
+        <div class="8list text-left">
+            <ul class="list p10" style="list-style-type: none;">
+                <li>Documentation</li>
+                <li>Resources</li>
+                <li>Registry Status</li>
+                <li>Report Issues</li>
+                <li>npm Community Site</li>
+                <li>Security</li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="col-md-4 text-left f10">
+        <h1>HELP</h1>
+        <div class="8list text-left">
+            <ul class="list p10" style="list-style-type: none;">
+                <li>About npm, Inc</li>
+                <li>JavaScriptSurvey.com</li>
+                <li>Events</li>
+                <li>Jobs</li>
+                <li>Press</li>
+                <li>npm Weekly</li>
+                <li>Blog</li>
+                <li>Twitter</li>
+                <li>GitHub</li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="col-md-4 text-left f10">
+        <h1>HELP</h1>
+        <div class="8list text-left">
+            <ul class="list p10" style="list-style-type: none;">
+                <li>Documentation</li>
+                <li>Resources</li>
+                <li>Registry Status</li>
+                <li>Report Issues</li>
+                <li>npm Community Site</li>
+                <li>Security</li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+<div class="border2">
+
+</div>
+<div class="container">
+    <h2>Carousel Example</h2>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="/imagenes/fila9.png" alt="Los Angeles" style="width:100%;">
+            </div>
+
+            <div class="item">
+                <img src="/imagenes/fila4.png" alt="Chicago" style="width:100%;">
+            </div>
+
+            <div class="item">
+                <img src="ny.jpg" alt="New york" style="width:100%;">
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+<div class="container">
+    <h2>Carousel Example</h2>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="la.jpg" alt="Los Angeles" style="width:100%;">
+            </div>
+
+            <div class="item">
+                <img src="chicago.jpg" alt="Chicago" style="width:100%;">
+            </div>
+
+            <div class="item">
+                <img src="ny.jpg" alt="New york" style="width:100%;">
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+</body>
+</html>
