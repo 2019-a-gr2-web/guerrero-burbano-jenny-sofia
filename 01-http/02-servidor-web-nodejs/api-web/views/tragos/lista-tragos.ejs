@@ -8,7 +8,16 @@
     <title>Document</title>
 </head>
 <body>
-<table>
+<style>
+    table, tr,td, th{
+        border: solid;
+    }
+</style>
+<a href="/api/traguito/crear">
+    <button>Nuevo</button>
+</a>
+
+    <table>
     <tr>
         <th>Nombre</th>
         <th>Grados</th>
@@ -26,6 +35,12 @@
         <td> <%=trago.tipo%> </td>
         <td>
             <button>Editar</button>
+            <form action="/api/traguito/eliminar"
+                  method="post"
+            >
+                <input type="number"  name="id" value="<%trago.id%>" hidden>
+                <button>Eliminar</button>
+            </form>
             <button>Eliminar</button>
         </td>
     </tr>
