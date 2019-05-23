@@ -23,6 +23,17 @@ export class TragosService {
         this.bddTragos.push(nuevoTrago);
         return nuevoTrago;
     }
+    eliminar(id: number): Trago[] {
+
+        // recien obtengo el indice
+        const indice = this.bddTragos.findIndex(
+            (trago) => {
+                return trago.id === id;
+            },
+        );
+
+        return this.bddTragos.splice(indice, 1); // parametros(indice que quiero empezar, cuantos eliminar)
+    }
 
     buscarPorId(id: number) {
         this.bddTragos.find(
