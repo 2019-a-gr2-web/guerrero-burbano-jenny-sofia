@@ -10,6 +10,7 @@ export class TragosController {
     @Get('lista')
     listarTragos(@Response() res) {
         const arregloTragos = this._tragosService.bddTragos;
+
         res.render('tragos/lista-tragos', { arregloTragos} );
     }
     @Get('crear')
@@ -17,7 +18,7 @@ export class TragosController {
         const arregloTragos = this._tragosService.bddTragos;
         res.render('tragos/crear-editar');
     }
-    @Get('eliminar')
+    @Post('eliminar')
     eliminar( @Body('id') id: number,
               @Res() res,
 

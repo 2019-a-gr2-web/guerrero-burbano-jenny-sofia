@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title>Document</title>
+
+
+</head>
+<body>
+<div class="col-md-12">
+    <panel class="panel panel-info">
+        <button class="btn bnt-success"><a href="crear">Crear</a></button>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Opciones</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% arregloPlatos.forEach((value) =>{ %>
+            <tr>
+                <td> <%=value.nombre%></td>
+                <td> <%=value.precio%></td>
+                <td>
+                    <button class="btn btn-info">
+                        Editar
+                    </button>
+                    <form method="post" action="/api/platos/eliminar">
+                        <input type="number"  name="id" value="<%value.id%>" hidden>
+                        <button class="btn btn-danger">
+
+                            Eliminar
+                        </button>
+                    </form>
+
+                </td>
+
+            </tr>
+            <% }) %>
+
+            </tbody>
+        </table>
+    </panel>
+</div>
+</body>
+</html>
