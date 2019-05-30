@@ -12,15 +12,40 @@ export class AutoresController {
     @Get('ver')
     ver(@Res() res, @Req() req){
        const arregloAutores= this.appService.bdAutores
-        console.log("CXHAOOO", arregloAutores[0])
+
+        const tempNombre=req.signedCookies.nombreUsuario
+        return res.render('gestion/gAutor',{tempNombre, arregloAutores} )
+
+    }
+    @Post('crear')
+    crear(@Res() res, @Body() autor:Autor, @Req() req){
+
+
+        this.autoresService.crear(autor);
+        const arregloAutores= this.appService.bdAutores
+        console.log(autor)
         const tempNombre=req.signedCookies.nombreUsuario
         return res.render('gestion/gAutor',{tempNombre, arregloAutores} )
 
     }
     @Post('eliminar')
-    eliminar(@Res() res, @Body() body){
+    eliminar(@Res() res, @Body() body, @Req() req){
 
-        console.log(body.id)
+
+
+        const tempNombre=req.signedCookies.nombreUsuario
+
+        const index= this.appService.bdAutores.findIndex(
+            value => {
+                return value.id===body.id
+            }
+        );
+
+        this.appService.bdAutores.splice(index,1)
+
+        const arregloAutores= this.appService.bdAutores
+        return res.render('gestion/gAutor',{tempNombre, arregloAutores} )
+
         //const arre
     }
 

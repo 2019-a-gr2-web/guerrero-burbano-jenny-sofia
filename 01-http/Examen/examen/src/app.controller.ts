@@ -20,6 +20,11 @@ export class AppController {
     res.clearCookie('nombreUsuario')
     return res.render('login/login')
   }
+  @Get('crearAutor')
+  crearVista(@Res() res, @Req() req){
+    const tempNombre=req.signedCookies.nombreUsuario
+    return res.render('gestion/crearAutor', {tempNombre})
+  }
   @Get('gestionarAutores')
   gestionarAutores(@Res() res, @Req() req){
 
