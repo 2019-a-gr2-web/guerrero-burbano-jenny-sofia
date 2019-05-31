@@ -16,11 +16,11 @@ export class LibrosService {
         this.appService.bdLibros.push(nuevoLibro)
         this.idnum++
     }
-    encontrar(nombreTmp){
+    encontrar(nombreTmp, id){
         console.log(nombreTmp.toString())
         const arreglo= this.appService.bdLibros.filter(
             value => {
-                return value.nombre.toUpperCase().includes(nombreTmp.toString().toUpperCase())
+                return value.nombre.toUpperCase().includes(nombreTmp.toString().toUpperCase()) && value.autorId==id
             }
 
         )

@@ -31,8 +31,9 @@ export class LibrosController {
     @Post('encontrar')
     encontrar(@Res() res, @Body() body,  @Req() req){
         const tempNombre=req.signedCookies.nombreUsuario
-        const arregloHijos=this.librosService.encontrar(body.nombre)
-        res.render('gestion/gLibro', {arregloHijos, tempNombre})
+        const arregloHijos=this.librosService.encontrar(body.nombre, body.id)
+        const id=body.id
+        res.render('gestion/gLibro', {arregloHijos, tempNombre, id})
     }
     @Post('crear')
     crear(@Res() res, @Body() libro:Libro, @Req() req){
