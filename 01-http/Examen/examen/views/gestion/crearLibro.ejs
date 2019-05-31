@@ -10,7 +10,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <title>Document</title>
     <style>
-        .separador{
+        .separador {
             height: 10vh;
         }
     </style>
@@ -29,30 +29,47 @@
 <div class="col-md-12">
     <div class="panel panel-info">
         <div class="panel-heading">
-            <legend class="">GESTIÓN DE AUTORES</legend>
+            <legend class="">CREACIÓN DE LIBRO</legend>
 
         </div>
-        <div class="panel-body">
-            <div class="col-md-8">
-                <div class="input-group col-md-10">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
-                    <input id="email" type="text" class="form-control" name="email" placeholder="Escriba aquí....">
+        <div class="panel-body text-center">
+            <form action="/api/libros/crear" method="post">
+                <div class="form-group">
+                    <label for="icbnId">ICBN:</label>
+                    <input name="ICBN" type="text" class="form-control" id="icbnId">
                 </div>
 
-            </div>
-            <div class="col-md-2">
-                <button class="btn btn-info">Busqueda</button>
-                <button class="btn btn-success pull-right">Crear</button>
-            </div>
-            <div class="col-md-12 separador"></div>
-            <table class="table table-striped">
-                <thead>
-                <tr>
-                    <th>Firstname</th>
-                    <th>Lastname</th>
-                    <th>Email</th>
-                </tr>
-            </table>
+                <div class="form-group">
+                    <label for="nombreId">Nombre:</label>
+                    <input name="nombre" type="text" class="form-control" id="nombreId">
+                </div>
+                <div class="form-group">
+                    <label for="numeroPaginasId">Numero páginas:</label>
+                    <input name="numeroPaginas" type="text" class="form-control" id="numeroPaginasId">
+                </div>
+                <div class="form-group">
+                    <label for="edicionId">Edicion:</label>
+                    <input name="edicion" type="text" class="form-control" id="edicionId">
+                </div>
+                <div class="form-group">
+                    <label for="fechaPublicacionId">Fecha publicación:</label>
+                    <input type="date" name="fechaPublicacion" class="form-control" id="fechaId">
+                </div>
+                <div class="form-group">
+                    <label for="nombreEditorialId">Nombre editorial:</label>
+                    <input type="number" name="nombreEditorial" class="form-control" id="nombreEditorialId">
+                </div>
+                <div class="form-group">
+                    <label for="autorIdId">Autor id:</label>
+                    <input type="number" name="autorId" class="form-control" id="autorIdId" value=<%= id%>>
+                </div>
+
+                <button class="btn btn-success">Guardar</button>
+
+            </form>
+            <form action="/api/autores/ver">
+                <button class="btn btn-danger reset"  >Cancelar</button>
+            </form>
         </div>
     </div>
 </div>

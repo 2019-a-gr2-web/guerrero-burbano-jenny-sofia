@@ -14,4 +14,14 @@ export class AutoresService {
         this.appService.bdAutores.push(nuevoAutor)
         this.idnum++
     }
+    encontrar(nombreTmp){
+        console.log(nombreTmp.toString())
+        const arreglo= this.appService.bdAutores.filter(
+            value => {
+                return value.nombre.toUpperCase().includes(nombreTmp.toString().toUpperCase())
+            }
+
+        )
+        return arreglo
+    }
 }

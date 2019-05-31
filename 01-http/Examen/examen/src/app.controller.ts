@@ -23,22 +23,37 @@ export class AppController {
   @Get('crearAutor')
   crearVista(@Res() res, @Req() req){
     const tempNombre=req.signedCookies.nombreUsuario
+    if(tempNombre){
     return res.render('gestion/crearAutor', {tempNombre})
+    }else{
+      return res.render('login/login')
+    }
+  }
+  @Post('crearLibro')
+  crearVistaLibro(@Res() res, @Req() req,@Body() body){
+    const tempNombre=req.signedCookies.nombreUsuario
+    const id=body.id
+    return res.render('gestion/crearLibro', {tempNombre, id})
   }
   @Get('gestionarAutores')
   gestionarAutores(@Res() res, @Req() req){
 
     const arregloAutores=this.appService.bdAutores
     const tempNombre= req.signedCookies.nombreUsuario;
-    console.log("mi nombre esssss", tempNombre)
-    this.appService.nombre="NADAAA"
+    if(tempNombre){
+      console.log("mi nombre esssss", tempNombre)
+      this.appService.nombre="NADAAA"
     return res.render('gestion/gAutor',{tempNombre, arregloAutores} )
+    }else{
+      return res.render('login/login')
+    }
   }
   @Post('entrar')
   entrar(@Res() res, @Body() nombre, @Req() req){
     console.log(req.signedCookies.nombre)
     this.appService.nombre= nombre.nombre;
     const tempNombre= this.appService.nombre;
+    if(tempNombre){
 
     res.cookie(
         "nombreUsuario", nombre.nombre, {
@@ -49,6 +64,9 @@ export class AppController {
 
 
     return  res.render('menu/menu',{tempNombre} )
+    }else{
+      return res.render('login/login')
+    }
   }
 
 

@@ -29,11 +29,11 @@
 <div class="col-md-12">
     <div class="panel panel-info">
         <div class="panel-heading">
-            <legend class="">GESTIÓN DE AUTORES</legend>
+            <legend class="">GESTIÓN DE LIBROS</legend>
 
         </div>
         <div class="panel-body">
-            <form action="/api/autores/encontrar" method="post">
+            <form action="/api/libros/encontrar" method="post">
                 <div class="col-md-8">
                     <div class="input-group ">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
@@ -50,7 +50,9 @@
                 </div>
             </form>
             <div class="col-md-2">
-                <form method="get" action="/api/crearAutor">
+                <form method="post" action="/api/crearLibro">
+                    <label for="Id">Fecha publicación:</label>
+                    <input type="number" name="id" class="form-control" id="Id" value=<%= id %>>
                     <button class="btn btn-success pull-right">Crear</button>
                 </form>
             </div>
@@ -58,35 +60,32 @@
             <table class="table table-striped">
                 <thead>
                 <tr>
+                    <th>ICBN</th>
                     <th>Nombre</th>
-                    <th>Apellidos</th>
-                    <th>FechaNacimiento</th>
-                    <th>Numero libros</th>
-                    <th>Es ecuatoriano?</th>
-                    <th>Opciones</th>
-                </tr>
-                <% arregloAutores.forEach((autor)=>{ %>
-                    <tr>
-                        <td><%= autor.nombre %></td>
-                        <td><%= autor.apellidos %></td>
-                        <td><%= autor.fechaNacimiento %></td>
-                        <td><%= autor.numeroLibros %></td>
-                        <td><%= autor.ecuatoriano %></td>
-                        <td>
+                    <th>Número de páginas</th>
+                    <th>Edición</th>
+                    <th>Fecha publicación</th>
+                    <th>Nombre Editorial</th>
 
-                            <form action="/api/autores/eliminar"
+                </tr>
+                <% arregloHijos.forEach((libro)=>{ %>
+                    <tr>
+                        <td><%= libro.ICBN %></td>
+                        <td><%= libro.nombre %></td>
+                        <td><%= libro.numeroPaginas %></td>
+                        <td><%= libro.edicion %></td>
+                        <td><%= libro.fechaPublicacion %></td>
+                        <td><%= libro.nombreEditorial %></td>
+                        <td><%= libro.autorId %></td>
+
+                        <td>
+                            <form action="/api/libros/eliminar"
                                   method="post">
-                                <input type="number"  name="id" value="<%=autor.id%>" hidden >
+                                <input type="number"  name="id" value="<%=libro.id%>" hidden >
                                 <button class="btn btn-danger">Eliminar</button>
                             </form>
-
-
                         </td>
-                        <td>
-                            <form action="/api/autores/gestionHijos/<%= autor.id%>">
-                            <button class="btn btn-info">Gestionar Hijos</button>
-                            </form>
-                        </td>
+
                     </tr>
                 <% }) %>
             </table>
