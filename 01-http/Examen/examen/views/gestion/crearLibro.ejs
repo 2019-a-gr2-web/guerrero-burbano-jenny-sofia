@@ -36,7 +36,7 @@
             <form action="/api/libros/crear" method="post">
                 <div class="form-group">
                     <label for="icbnId">ICBN:</label>
-                    <input name="ICBN" type="text" class="form-control" id="icbnId">
+                    <input name="ICBN" type="number" class="form-control" id="icbnId">
                 </div>
 
                 <div class="form-group">
@@ -45,11 +45,11 @@
                 </div>
                 <div class="form-group">
                     <label for="numeroPaginasId">Numero páginas:</label>
-                    <input name="numeroPaginas" type="text" class="form-control" id="numeroPaginasId">
+                    <input name="numeroPaginas" type="number" class="form-control" id="numeroPaginasId">
                 </div>
                 <div class="form-group">
                     <label for="edicionId">Edicion:</label>
-                    <input name="edicion" type="text" class="form-control" id="edicionId">
+                    <input name="edicion" type="number" class="form-control" id="edicionId">
                 </div>
                 <div class="form-group">
                     <label for="fechaPublicacionId">Fecha publicación:</label>
@@ -57,11 +57,11 @@
                 </div>
                 <div class="form-group">
                     <label for="nombreEditorialId">Nombre editorial:</label>
-                    <input type="number" name="nombreEditorial" class="form-control" id="nombreEditorialId">
+                    <input type="text" name="nombreEditorial" class="form-control" id="nombreEditorialId">
                 </div>
                 <div class="form-group">
                     <label for="autorIdId">Autor id:</label>
-                    <input type="number" name="autorId" class="form-control" id="autorIdId" value=<%= id%>>
+                    <input type="hidden" name="autorId" class="form-control" id="autorIdId" value=<%= id%>>
                 </div>
 
                 <button class="btn btn-success">Guardar</button>

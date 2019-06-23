@@ -23,9 +23,15 @@ export class LibrosController {
     eliminar(@Res() res, @Req() req, @Body() body){
         const tempNombre= req.signedCookies.nombreUsuario
         this.librosService.eliminar(body.id)
-        const arregloHijos= this.appService.bdLibros
+        const arregloHijos= this.appService.bdLibros.filter(
+            value => {
+                return value.autorId==body.idAutor
+            }
+        )
+        const id= body.idAutor
+        const idAutor= body.id
 
-        return res.render('gestion/gLibro', {arregloHijos, tempNombre})
+        return res.render('gestion/gLibro', {arregloHijos, tempNombre, id})
 
     }
     @Post('encontrar')
@@ -49,8 +55,11 @@ export class LibrosController {
 
         const id=libro.autorId
         const tempNombre=req.signedCookies.nombreUsuario
+        if(tempNombre){
         return res.render('gestion/gLibro', {arregloHijos, tempNombre, id})
-
+        }else{
+            return res.render('login/login')
+        }
     }
 
 }

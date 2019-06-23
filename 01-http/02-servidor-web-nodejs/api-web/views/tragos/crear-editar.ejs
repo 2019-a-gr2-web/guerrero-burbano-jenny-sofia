@@ -1,3 +1,13 @@
+
+<%- include('../componentes/menu/menu')%>
+<% const existeMensaje = mensaje %>
+<%if(existeMensaje) {%>
+    <p>ERROR EN FORMULARIO! <%=mensaje%></p>
+<% }%>
+
+
+
+
 <h1>FOMULARIO DE CREACIÓN</h1>
 <p>Crea un nuevo trago</p>
 <form action="/api/traguito/crear"
@@ -5,8 +15,7 @@ method="post">
     <label for="nombreId"></label>
     <input id="nombreId" name="nombre" type="text" value="">
 
-    <label for="nombreId"></label>
-    <input id="nombreId" name="nombre" type="text">
+
     <br>
     <label for="tipoId">Tipo trago</label>
     <select name="tipo" id="tipoId">
@@ -40,3 +49,4 @@ method="post">
     <br>
 
 </form>
+<%- include('../componentes/footer/footer')%>

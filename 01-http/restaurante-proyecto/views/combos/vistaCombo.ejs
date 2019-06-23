@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<div class="">
+    <div class="panel panel-default">
+        <div class="panel-heading">Combo nombre</div>
+        <div class="panel-body">
+            <div class="col-md-6">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th>Opciones</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <% arregloDisponibles.forEach((plato)=>{ %>
+                        <tr>
+                            <form action="/api/plato/editar" method="post">
+
+                                <td><input id="nombreId" type="text" class="form-control" name="nombre"
+                                           value="<%= plato.nombre %>"></td>
+                                <td><input id="descripcionId" type="text" class="form-control" name="descripcion"
+                                           value="<%= plato.descripcion %>"></td>
+                                <td><input id="precioId" type="text" class="form-control" name="precio"
+                                           value="<%= plato.precio %>">
+                                    <input id="Id" type="hidden" class="form-control" name="id" value="<%= plato.id %>">
+                                </td>
+
+                                <td>
+                                    <button class="btn btn-info">Editar</button>
+                                </td>
+                            </form>
+                            <td>
+                                <button class="btn btn-danger">Eliminar</button>
+                            </td>
+
+                        </tr>
+                    <% }) %>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-6">
+
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

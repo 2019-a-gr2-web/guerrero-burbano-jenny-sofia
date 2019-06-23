@@ -33,6 +33,11 @@ export class LibrosService {
             }
         )
         this.appService.bdLibros.splice(index,1)
+        return this.appService.bdLibros.filter(
+            value => {
+                return
+            }
+        )
     }
 
 

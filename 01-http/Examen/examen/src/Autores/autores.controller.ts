@@ -21,7 +21,7 @@ export class AutoresController {
     @Post('crear')
     crear(@Res() res, @Body() autor:Autor, @Req() req){
 
-
+        autor.ecuatoriano=true;
         this.autoresService.crear(autor);
         const arregloAutores= this.appService.bdAutores
         console.log(autor)
@@ -32,23 +32,31 @@ export class AutoresController {
     @Post('encontrar')
     encontrar(@Res() res, @Body() body,  @Req() req){
         const tempNombre=req.signedCookies.nombreUsuario
+        if(tempNombre){
         const arregloAutores=this.autoresService.encontrar(body.nombre)
         res.render('gestion/gAutor', {arregloAutores, tempNombre})
+        }else{
+            res.render('login/login')
+        }
     }
 
     @Get('gestionHijos/:id')
     gestionHijos(@Res() res, @Param() param, @Req() req){
         const tempNombre=req.signedCookies.nombreUsuario
+        if(tempNombre){
         const arregloHijos= this.appService.bdLibros.filter(
             value => {
                 return value.autorId==param.id
             }
         )
+
         const id=param.id;
         this.appService.id=id;
         console.log(arregloHijos)
         return res.render('gestion/gLibro', {tempNombre, arregloHijos, id})
-
+        }else{
+            res.render('login/login')
+        }
     }
     @Post('eliminar')
     eliminar(@Res() res, @Body() body,  @Req() req){

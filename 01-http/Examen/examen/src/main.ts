@@ -8,7 +8,7 @@ async function bootstrap() {
   // @ts-ignore
   app.set('view engine', 'ejs');
   app.use(cookieParser('Seguro'));
-  await app.listen(3002);
+  await app.listen(3003);
 
 }
 bootstrap();

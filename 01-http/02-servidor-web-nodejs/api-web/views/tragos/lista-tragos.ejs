@@ -8,6 +8,9 @@
     <title>Document</title>
 </head>
 <body>
+<% const nombreUsuario= 'Adrian';%>
+<%- include('../componentes/menu/menu',{nombre:nombreUsuario})%>
+
 <style>
     table, tr,td, th{
         border: solid;
@@ -45,5 +48,6 @@
     </tr>
     <% })%>
 </table>
+<%- include('../componentes/footer/footer')%>
 </body>
 </html>

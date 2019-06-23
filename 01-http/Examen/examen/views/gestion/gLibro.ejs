@@ -53,8 +53,8 @@
             </form>
             <div class="col-md-2">
                 <form method="post" action="/api/crearLibro">
-                    <label for="Id">Fecha publicación:</label>
-                    <input type="number" name="id" class="form-control" id="Id" value=<%= id %>>
+
+                    <input type="hidden" name="id" class="form-control" id="Id" value=<%= id %>>
                     <button class="btn btn-success pull-right">Crear</button>
                 </form>
             </div>
@@ -84,6 +84,7 @@
                             <form action="/api/libros/eliminar"
                                   method="post">
                                 <input type="number"  name="id" value="<%=libro.id%>" hidden >
+                                <input type="hidden" name="idAutor" class="form-control" id="Id" value=<%= id %>>
                                 <button class="btn btn-danger">Eliminar</button>
                             </form>
                         </td>
