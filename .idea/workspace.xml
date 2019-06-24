@@ -71,11 +71,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/combos/combo.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="97" column="47" selection-start-line="97" selection-start-column="47" selection-end-line="97" selection-end-column="47" />
+            <state relative-caret-position="196">
+              <caret line="136" column="5" lean-forward="true" selection-start-line="132" selection-start-column="4" selection-end-line="136" selection-end-column="5" />
+              <folding>
+                <element signature="n#!!block;n#editarPlato#0;n#ComboController#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/platos/plato.controller.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="59" column="32" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
               <folding>
                 <element signature="e#0#64#0" expanded="true" />
               </folding>
@@ -83,21 +95,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/src/Autores/autores.module.ts">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/views/platos/inicioPlatos.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="201">
+              <caret line="59" column="75" selection-start-line="59" selection-start-column="75" selection-end-line="59" selection-end-column="75" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/app.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
               <folding>
-                <element signature="e#0#38#0" expanded="true" />
+                <element signature="e#0#44#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/src/Autores/autores.service.ts">
+        <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/combos/combo.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-102">
+            <state relative-caret-position="485">
+              <caret line="56" column="5" lean-forward="true" selection-start-line="42" selection-start-column="3" selection-end-line="56" selection-end-column="5" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
@@ -106,30 +129,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/views/platos/inicioPlatos.ejs">
+        <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/platos/plato.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="66" column="20" lean-forward="true" selection-start-line="31" selection-start-column="11" selection-end-line="66" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/views/componentes/menu/menu.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/views/combos/vistaCombo.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="100" column="63" selection-start-line="100" selection-start-column="63" selection-end-line="100" selection-end-column="63" />
+            <state relative-caret-position="60">
+              <caret line="55" column="13" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
               <folding>
-                <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="e#0#42#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -138,7 +143,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/app.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
+            <state relative-caret-position="68">
               <caret line="6" column="90" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="90" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
@@ -150,8 +155,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/views/combos/inicioCombo.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="14" selection-start-line="14" selection-end-line="14" selection-end-column="42" />
+            <state relative-caret-position="218">
+              <caret line="66" column="116" selection-start-line="66" selection-start-column="116" selection-end-line="66" selection-end-column="116" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/views/componentes/menu/menu.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="303">
+              <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/views/combos/vistaCombo.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="337">
+              <caret line="100" selection-start-line="100" selection-end-line="100" />
             </state>
           </provider>
         </entry>
@@ -184,7 +207,6 @@
         <option value="$PROJECT_DIR$/01-http/Examen/examen/src/main.ts" />
         <option value="$PROJECT_DIR$/01-http/Examen/examen/views/gestion/crearLibro.ejs" />
         <option value="$PROJECT_DIR$/01-http/Examen/examen/views/gestion/gLibro.ejs" />
-        <option value="$PROJECT_DIR$/01-http/Examen/examen/src/Autores/autores.controller.ts" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.module.ts" />
         <option value="$PROJECT_DIR$/01-http/restaurante-proyecto/src/main.ts" />
         <option value="$PROJECT_DIR$/01-http/restaurante-proyecto/src/Interfaces/platos.ts" />
@@ -210,8 +232,6 @@
         <option value="$PROJECT_DIR$/01-http/restaurante-proyecto/src/platos/DTO/plato.update.dto.ts" />
         <option value="$PROJECT_DIR$/01-http/restaurante-proyecto/src/combos/combo.entity.ts" />
         <option value="$PROJECT_DIR$/01-http/restaurante-proyecto/src/platos/plato.entity.ts" />
-        <option value="$PROJECT_DIR$/01-http/restaurante-proyecto/src/platos/plato.controller.ts" />
-        <option value="$PROJECT_DIR$/01-http/restaurante-proyecto/views/platos/inicioPlatos.ejs" />
         <option value="$PROJECT_DIR$/01-http/restaurante-proyecto/src/combos/DTO/combo.create.dto.ts" />
         <option value="$PROJECT_DIR$/01-http/restaurante-proyecto/src/combos/DTO/combo.update.dto.ts" />
         <option value="$PROJECT_DIR$/01-http/restaurante-proyecto/src/combos/relacion.entity.ts" />
@@ -221,13 +241,16 @@
         <option value="$PROJECT_DIR$/01-http/restaurante-proyecto/src/app.module.ts" />
         <option value="$PROJECT_DIR$/01-http/restaurante-proyecto/src/platos/plato.module.ts" />
         <option value="$PROJECT_DIR$/01-http/restaurante-proyecto/src/combos/combo.module.ts" />
-        <option value="$PROJECT_DIR$/01-http/restaurante-proyecto/views/combos/inicioCombo.ejs" />
         <option value="$PROJECT_DIR$/01-http/Examen/examen/src/Libros/libros.service.ts" />
-        <option value="$PROJECT_DIR$/01-http/restaurante-proyecto/src/combos/combo.service.ts" />
         <option value="$PROJECT_DIR$/01-http/restaurante-proyecto/src/app.service.ts" />
-        <option value="$PROJECT_DIR$/01-http/restaurante-proyecto/src/platos/plato.service.ts" />
+        <option value="$PROJECT_DIR$/01-http/Examen/examen/src/Autores/autores.controller.ts" />
         <option value="$PROJECT_DIR$/01-http/restaurante-proyecto/views/combos/vistaCombo.ejs" />
+        <option value="$PROJECT_DIR$/01-http/restaurante-proyecto/views/combos/inicioCombo.ejs" />
+        <option value="$PROJECT_DIR$/01-http/restaurante-proyecto/src/combos/combo.service.ts" />
         <option value="$PROJECT_DIR$/01-http/restaurante-proyecto/src/combos/combo.controller.ts" />
+        <option value="$PROJECT_DIR$/01-http/restaurante-proyecto/src/platos/plato.service.ts" />
+        <option value="$PROJECT_DIR$/01-http/restaurante-proyecto/src/platos/plato.controller.ts" />
+        <option value="$PROJECT_DIR$/01-http/restaurante-proyecto/views/platos/inicioPlatos.ejs" />
       </list>
     </option>
   </component>
@@ -305,6 +328,23 @@
               <item name="guerrero-burbano-jenny-sofia" type="b2602c69:ProjectViewProjectNode" />
               <item name="guerrero-burbano-jenny-sofia" type="462c0819:PsiDirectoryNode" />
               <item name="01-http" type="462c0819:PsiDirectoryNode" />
+              <item name="Examen" type="462c0819:PsiDirectoryNode" />
+              <item name="examen" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="guerrero-burbano-jenny-sofia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="guerrero-burbano-jenny-sofia" type="462c0819:PsiDirectoryNode" />
+              <item name="01-http" type="462c0819:PsiDirectoryNode" />
+              <item name="Examen" type="462c0819:PsiDirectoryNode" />
+              <item name="examen" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="gestion" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="guerrero-burbano-jenny-sofia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="guerrero-burbano-jenny-sofia" type="462c0819:PsiDirectoryNode" />
+              <item name="01-http" type="462c0819:PsiDirectoryNode" />
               <item name="restaurante-proyecto" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -321,6 +361,14 @@
               <item name="restaurante-proyecto" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="combos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="guerrero-burbano-jenny-sofia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="guerrero-burbano-jenny-sofia" type="462c0819:PsiDirectoryNode" />
+              <item name="01-http" type="462c0819:PsiDirectoryNode" />
+              <item name="restaurante-proyecto" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="platos" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="guerrero-burbano-jenny-sofia" type="b2602c69:ProjectViewProjectNode" />
@@ -465,7 +513,8 @@
       <workItem from="1561134454557" duration="22343000" />
       <workItem from="1561303445986" duration="4000" />
       <workItem from="1561303725488" duration="5521000" />
-      <workItem from="1561323020481" duration="16575000" />
+      <workItem from="1561323020481" duration="25317000" />
+      <workItem from="1561353135599" duration="3515000" />
     </task>
     <task id="LOCAL-00001" summary="Ejemplos de operadores">
       <created>1556657194836</created>
@@ -478,7 +527,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="285544000" />
+    <option name="totallyTimeSpent" value="297801000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -524,7 +573,7 @@
       <window_info anchor="right" id="Database" order="8" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22023809" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22023809" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -541,7 +590,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.4034188" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3863248" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -570,27 +619,15 @@
           <line>37</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/combos/combo.controller.ts</url>
+          <line>55</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/DTO/tragos.update.dto.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="28" selection-start-line="3" selection-start-column="28" selection-end-line="3" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/relacion/relacion.module.ts">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -808,16 +845,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/src/Autores/autores.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="104" lean-forward="true" selection-start-line="8" selection-start-column="65" selection-end-line="8" selection-end-column="104" />
-          <folding>
-            <element signature="e#0#76#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/combos/combo.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
@@ -848,35 +875,6 @@
     <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/platos/Interfaces/platoAux.ts">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/platos/plato.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="61" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/combos/combo.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/src/Autores/autores.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/src/Autores/autores.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-102">
@@ -902,30 +900,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/views/componentes/menu/menu.ejs">
+    <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/src/Autores/autores.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+        <state>
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/views/combos/inicioCombo.ejs">
+    <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/src/main.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="14" selection-start-line="14" selection-end-line="14" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/views/platos/inicioPlatos.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="66" column="20" lean-forward="true" selection-start-line="31" selection-start-column="11" selection-end-line="66" selection-end-column="20" />
+        <state>
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/app.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
+        <state relative-caret-position="68">
           <caret line="6" column="90" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="90" />
           <folding>
             <element signature="e#0#59#0" expanded="true" />
@@ -933,43 +928,98 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/platos/plato.service.ts">
+    <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/views/gestion/gAutor.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-37">
-          <caret line="24" column="118" selection-start-line="24" selection-start-column="118" selection-end-line="24" selection-end-column="118" />
+        <state relative-caret-position="221">
+          <caret line="85" column="83" selection-start-line="85" selection-start-column="33" selection-end-line="85" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/src/Autores/autores.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
           <folding>
-            <element signature="e#0#42#0" expanded="true" />
+            <element signature="e#0#76#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/views/componentes/menu/menu.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/views/combos/vistaCombo.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="100" selection-start-line="100" selection-end-line="100" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/app.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        <state relative-caret-position="119">
+          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/views/combos/vistaCombo.ejs">
+    <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/views/combos/inicioCombo.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="100" column="63" selection-start-line="100" selection-start-column="63" selection-end-line="100" selection-end-column="63" />
+        <state relative-caret-position="218">
+          <caret line="66" column="116" selection-start-line="66" selection-start-column="116" selection-end-line="66" selection-end-column="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/combos/combo.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="56" column="5" lean-forward="true" selection-start-line="42" selection-start-column="3" selection-end-line="56" selection-end-column="5" />
           <folding>
-            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/platos/plato.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="55" column="13" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/combos/combo.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="97" column="47" selection-start-line="97" selection-start-column="47" selection-end-line="97" selection-end-column="47" />
+        <state relative-caret-position="196">
+          <caret line="136" column="5" lean-forward="true" selection-start-line="132" selection-start-column="4" selection-end-line="136" selection-end-column="5" />
+          <folding>
+            <element signature="n#!!block;n#editarPlato#0;n#ComboController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/platos/plato.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="59" column="32" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
           <folding>
             <element signature="e#0#64#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/views/platos/inicioPlatos.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="59" column="75" selection-start-line="59" selection-start-column="75" selection-end-line="59" selection-end-column="75" />
         </state>
       </provider>
     </entry>

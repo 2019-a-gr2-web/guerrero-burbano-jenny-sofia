@@ -57,7 +57,10 @@
                             </td>
                         </form>
                         <td>
-                            <button class="btn btn-danger">Eliminar</button>
+                            <form action="/api/plato/eliminar" method="post">
+                                <input id="Id" type="hidden" class="form-control" name="id" value="<%= plato.id %>">
+                                <button class="btn btn-danger">Eliminar</button>
+                            </form>
                         </td>
 
                     </tr>

@@ -54,6 +54,11 @@ export class PlatoController{
 
 
    }
+    @Post('eliminar')
+    async eliminar(@Res() res, @Body('id') id:number ){
+        await this._platosService.eliminar(id)
+        res.redirect('/api/plato/lista')
+    }
    @Post('editar')
     async editarPlato(@Res() res, @Body() plato:Plato){
        let platoAValidar = new PlatoCreateDto()

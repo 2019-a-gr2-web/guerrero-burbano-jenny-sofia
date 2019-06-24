@@ -1,6 +1,6 @@
 import {Injectable} from '@nestjs/common';
 import {PlatoEntity} from '../platos/plato.entity';
-import {Repository, UpdateResult} from 'typeorm';
+import {getConnection, Repository, UpdateResult} from 'typeorm';
 import {Plato} from '../platos/Interfaces/plato';
 import {InjectRepository} from "@nestjs/typeorm";
 import {ComboEntity} from './combo.entity';
@@ -30,22 +30,7 @@ export class ComboService {
     }
     crear(nuevoCombo: Combo): Promise<ComboEntity> {
         const objetoEntidad= this._combosRepository.create(nuevoCombo);
-        const relacion:Relacion={
 
-           combo:1,
-            plato:1
-        };
-
-
-        const objeto= this._relacionRepository.create(relacion)
-        this._relacionRepository.save(objeto).then(
-            value => {
-                console.log('todo bien', value)
-            },
-            onerror=>{
-                console.log('error', onerror)
-            }
-        )
 
 
         return this._combosRepository.save(objetoEntidad)
@@ -55,8 +40,38 @@ export class ComboService {
         // this.bddTragos.push(nuevoTrago);
         // return nuevoTrago;
     }
-    crearRelacion(){
+    async eliminar(comboid){
+        console.log('----------------------', comboid)
+        try {
 
+        await getConnection().createQueryBuilder().delete().from(RelacionEntity)
+            .where("comboId = :comboId", {comboId: comboid})
+            .execute()
+        await getConnection().createQueryBuilder().delete().from(ComboEntity)
+            .where("id = :id", {id: comboid})
+            .execute()
+        }catch (e) {
+            console.log(e)
+        }
+
+    }
+    crearRelacion(idPlato:number, idCombo: number){
+        const relacion:Relacion={
+
+            combo:idCombo,
+            plato:idPlato
+        };
+
+
+        const objeto= this._relacionRepository.create(relacion)
+        return this._relacionRepository.save(objeto).then(
+            value => {
+                console.log('todo bien', value)
+            },
+            onerror=>{
+                console.log('error', onerror)
+            }
+        )
     }
     editar(comboEditar: Combo): Promise<UpdateResult>{
         return this._combosRepository.update(comboEditar.id, comboEditar)
