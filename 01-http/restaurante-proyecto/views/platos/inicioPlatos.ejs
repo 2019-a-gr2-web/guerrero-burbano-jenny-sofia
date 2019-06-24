@@ -20,11 +20,17 @@
         </div>
         <div class="panel-body">
             <div class="col-md-10">
-                <div class="input-group">
+                <form action="/api/plato/buscar" method="post">
+                    <div class="input-group">
 
-                    <input id="email" type="text" class="form-control" name="email" placeholder="Búsqueda...">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
-                </div>
+
+                        <input id="search" type="text" class="form-control" name="nombre" placeholder="Búsqueda...">
+
+                        <span class="input-group-addon"><i><button
+                                        class=" submit btn btn-default  btn-sm glyphicon glyphicon-search"></button></i></span>
+
+                    </div>
+                </form>
             </div>
             <div class="col-md-2">
                 <button class="btn btn-info" data-toggle="modal" data-target="#myModal">Nuevo</button>
@@ -90,7 +96,7 @@
                     </div>
                     <div class="form-group">
                         <label for="pwd">Precio:</label>
-                        <input type="password" class="form-control" name="precio" id="pwd">
+                        <input type="text" class="form-control" name="precio" id="pwd">
                     </div>
                     <div class="form-group">
                         <label for="comment">Descripción:</label>

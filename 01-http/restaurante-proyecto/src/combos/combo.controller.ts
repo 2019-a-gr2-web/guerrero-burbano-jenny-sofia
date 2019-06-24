@@ -32,6 +32,13 @@ export class ComboController {
         res.render('combos/inicioCombo', {arregloCombos});
 
     }
+    @Post('buscar')
+    async buscarCombos(@Res() res, @Body('nombre') nombre:string) {
+        const arregloCombos = await this._combosService.buscar(nombre)
+        console.log('RESULTADO BUSQUEDA', arregloCombos)
+        res.render('combos/inicioCombo', {arregloCombos});
+
+    }
     @Get('prueba/:id')
     prueba(@Res() res, @Param() params){
         const arregloDisponibles: Plato[] = this._appService.platosDisponibles;

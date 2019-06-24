@@ -21,7 +21,15 @@ export class PlatoService {
 
     }
     buscar(parametrosBusqueda?):Promise<any>{
-        return this._platosRepository.find(parametrosBusqueda)
+        if (parametrosBusqueda) {
+            return this._platosRepository.find({
+                where: [
+                    {nombre: parametrosBusqueda}
+                ]
+            })
+        } else {
+            return this._platosRepository.find()
+        }
     }
     platosSeleccionados(idCombo:string){
        this.query ="select  platoId as id, nombre_plato as nombre, descripcion_plato as descripcion, precio as precio from bd_plato, bd_relacion where bd_relacion.platoId=bd_plato.id and bd_relacion.comboId="+idCombo

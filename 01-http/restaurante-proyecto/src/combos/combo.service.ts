@@ -16,21 +16,29 @@ export class ComboService {
                 private readonly _combosRepository: Repository<ComboEntity>,
                 @InjectRepository(RelacionEntity)
                 private readonly  _relacionRepository: Repository<RelacionEntity>,
-               ) {
-
+    ) {
 
 
     }
-   // buscarPlatos(parametrosBusqueda?):Promise<any>{
+
+    // buscarPlatos(parametrosBusqueda?):Promise<any>{
     //   return this._platosRepository.find(parametrosBusqueda)
     //}
-    buscar(parametrosBusqueda?):Promise<any>{
-        return this._combosRepository.find(parametrosBusqueda)
+    buscar(parametrosBusqueda?): Promise<any> {
+        if (parametrosBusqueda) {
+            return this._combosRepository.find({
+                where: [
+                    {nombre: parametrosBusqueda}
+                ]
+            })
+        } else {
+            return this._combosRepository.find()
+        }
 
     }
-    crear(nuevoCombo: Combo): Promise<ComboEntity> {
-        const objetoEntidad= this._combosRepository.create(nuevoCombo);
 
+    crear(nuevoCombo: Combo): Promise<ComboEntity> {
+        const objetoEntidad = this._combosRepository.create(nuevoCombo);
 
 
         return this._combosRepository.save(objetoEntidad)
@@ -40,43 +48,47 @@ export class ComboService {
         // this.bddTragos.push(nuevoTrago);
         // return nuevoTrago;
     }
-    async eliminar(comboid){
+
+    async eliminar(comboid) {
         console.log('----------------------', comboid)
         try {
 
-        await getConnection().createQueryBuilder().delete().from(RelacionEntity)
-            .where("comboId = :comboId", {comboId: comboid})
-            .execute()
-        await getConnection().createQueryBuilder().delete().from(ComboEntity)
-            .where("id = :id", {id: comboid})
-            .execute()
-        }catch (e) {
+            await getConnection().createQueryBuilder().delete().from(RelacionEntity)
+                .where("comboId = :comboId", {comboId: comboid})
+                .execute()
+            await getConnection().createQueryBuilder().delete().from(ComboEntity)
+                .where("id = :id", {id: comboid})
+                .execute()
+        } catch (e) {
             console.log(e)
         }
 
     }
-    crearRelacion(idPlato:number, idCombo: number){
-        const relacion:Relacion={
 
-            combo:idCombo,
-            plato:idPlato
+    crearRelacion(idPlato: number, idCombo: number) {
+        const relacion: Relacion = {
+
+            combo: idCombo,
+            plato: idPlato
         };
 
 
-        const objeto= this._relacionRepository.create(relacion)
+        const objeto = this._relacionRepository.create(relacion)
         return this._relacionRepository.save(objeto).then(
             value => {
                 console.log('todo bien', value)
             },
-            onerror=>{
+            onerror => {
                 console.log('error', onerror)
             }
         )
     }
-    editar(comboEditar: Combo): Promise<UpdateResult>{
+
+    editar(comboEditar: Combo): Promise<UpdateResult> {
         return this._combosRepository.update(comboEditar.id, comboEditar)
     }
-    crearPrueba(){
+
+    crearPrueba() {
 
     }
 }

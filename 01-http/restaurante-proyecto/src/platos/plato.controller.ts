@@ -18,6 +18,13 @@ export class PlatoController{
 
         res.render('platos/inicioPlatos', {arregloPlatos});
     }
+    @Post('buscar')
+    async buscarCombos(@Res() res, @Body('nombre') nombre:string) {
+        const arregloPlatos = await this._platosService.buscar(nombre)
+
+        res.render('platos/inicioPlatos', {arregloPlatos});
+
+    }
     @Post('crear')
     async crearTragoPost(
         @Body() plato: Plato,
