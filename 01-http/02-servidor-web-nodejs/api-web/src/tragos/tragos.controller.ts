@@ -3,6 +3,9 @@ import {TragosService} from './tragos.service';
 import {Trago} from './Interfaces/trago';
 import {TragosCreateDto} from './DTO/tragos.create.dto';
 import {validate} from 'class-validator';
+import {Combo} from '../../../../restaurante-proyecto/src/combos/Interfaces/combo';
+import {ComboUpdateDto} from '../../../../restaurante-proyecto/src/combos/DTO/combo.update.dto';
+import {TragosUpdateDto} from './DTO/tragos.update.dto';
 
 @Controller('/api/traguito')
 export class TragosController {
@@ -13,9 +16,9 @@ export class TragosController {
     @Get('lista')
     async listarTragos(@Response() res) {
 
-        const arregloPlatos = await this._tragosService.buscar()
+        const arregloTragos = await this._tragosService.buscar()
 
-        res.render('tragos/lista-tragos', {arregloPlatos});
+        res.render('tragos/lista-tragos', {arregloTragos});
     }
 
     @Get('crear')
@@ -26,13 +29,43 @@ export class TragosController {
 
 
     @Post('eliminar')
-    eliminar(@Body('id') id: number,
+    async eliminar(@Body() body,
              @Res() res,
     ) {
+        console.log('holaaaa', body)
 
-        this._tragosService.eliminar(id);
+        await this._tragosService.eliminar(body.id);
         res.redirect('/api/traguito/lista');
 
+    }
+    @Post('editar')
+    async editarPlato(@Res() res, @Body() trago: Trago) {
+        let tragoAValidar = new TragosUpdateDto()
+        tragoAValidar.nombre = trago.nombre;
+        tragoAValidar.tipo = trago.tipo;
+        tragoAValidar.fechaCaducidad =new Date( trago.fechaCaducidad);
+        tragoAValidar.precio = Number(trago.precio);
+        tragoAValidar.gradosAlcohol = Number(trago.gradosAlcohol);
+        try {
+            const errores = await validate(tragoAValidar)
+            if (errores.length > 0) {
+                console.log(errores)
+                //res.redirect('/api/traguito/crear?mensaje=Tienes un error en el formulario')
+            } else {
+                const respuestaCrear = await this._tragosService.editar(trago)
+                console.log('Respuesta--------------!!!!', respuestaCrear)
+
+                res.redirect('/api/traguito/lista');
+            }
+
+        } catch (e) {
+            console.error("ERROR CREANDO TRAGUITO", e)
+            res.status(500);
+            res.send({
+                mensaje: 'Error',
+                codigo: 500
+            })
+        }
     }
 
     // res.render('tragos/crear-editar');

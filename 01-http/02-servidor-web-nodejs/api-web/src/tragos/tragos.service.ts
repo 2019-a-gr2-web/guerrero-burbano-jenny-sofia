@@ -1,9 +1,12 @@
 import {Injectable} from '@nestjs/common';
 import {Trago} from './Interfaces/trago';
-
+import {getConnection, Repository, UpdateResult} from 'typeorm';
 import {InjectRepository} from "@nestjs/typeorm";
 import {TragosEntity} from "./tragos.entity";
-import {Repository} from "typeorm";
+
+import {RelacionEntity} from '../../../../restaurante-proyecto/src/combos/relacion.entity';
+import {ComboEntity} from '../../../../restaurante-proyecto/src/combos/combo.entity';
+import {Combo} from '../../../../restaurante-proyecto/src/combos/Interfaces/combo';
 
 @Injectable()
 export class TragosService {
@@ -33,16 +36,22 @@ export class TragosService {
     crearPrueba(){
 
     }
-    eliminar(id: number): Trago[] {
+    async eliminar(id: number){
 
         // recien obtengo el indice
-        const indice = this.bddTragos.findIndex(
-            (trago) => {
-                return trago.id === id;
-            },
-        );
+        try {
 
-        return this.bddTragos.splice(indice, 1); // parametros(indice que quiero empezar, cuantos eliminar)
+
+            await getConnection().createQueryBuilder().delete().from(TragosEntity)
+                .where("id = :id", {id: id})
+                .execute()
+            console.log('eliminadosss', id)
+        } catch (e) {
+            console.log(e)
+        }
+    }
+    editar(tragoEditar: Trago): Promise<UpdateResult> {
+        return this._tragosRepository.update(tragoEditar.id, tragoEditar)
     }
 
     buscarPorId(id: number) {
