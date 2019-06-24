@@ -11,8 +11,7 @@ import {Libro} from '../../../Examen/examen/src/Libros/interfaces/libro';
 
 @Injectable()
 export class ComboService {
-    platoSeleccionados: Plato[]=[]
-    platosDisponibles: Plato[]=[]
+
     constructor(@InjectRepository(ComboEntity)
                 private readonly _combosRepository: Repository<ComboEntity>,
                 @InjectRepository(RelacionEntity)
@@ -27,6 +26,7 @@ export class ComboService {
     //}
     buscar(parametrosBusqueda?):Promise<any>{
         return this._combosRepository.find(parametrosBusqueda)
+
     }
     crear(nuevoCombo: Combo): Promise<ComboEntity> {
         const objetoEntidad= this._combosRepository.create(nuevoCombo);

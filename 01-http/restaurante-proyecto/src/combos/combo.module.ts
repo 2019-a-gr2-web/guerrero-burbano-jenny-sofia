@@ -4,6 +4,8 @@ import {ComboEntity} from './combo.entity';
 import {RelacionEntity} from './relacion.entity';
 import {ComboController} from './combo.controller';
 import {ComboService} from './combo.service';
+
+import {AppService} from '../app.service';
 import {PlatoService} from '../platos/plato.service';
 import {PlatoModule} from '../platos/plato.module';
 @Module(
@@ -14,12 +16,12 @@ import {PlatoModule} from '../platos/plato.module';
                     ComboEntity, RelacionEntity
                 ],
                 'default'
-            ),
+            ),PlatoModule
 
 
         ], // Módulos
         controllers: [ComboController],
-        providers: [ComboService], // servicios
+        providers: [ComboService,AppService], // servicios
         exports: [ComboService], // Exportar servicios
     },
 )

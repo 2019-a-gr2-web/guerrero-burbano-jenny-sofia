@@ -31,6 +31,8 @@ export class LibrosService {
             value => {
                 return value.id==id
             }
+
+
         )
         this.appService.bdLibros.splice(index,1)
         return this.appService.bdLibros.filter(

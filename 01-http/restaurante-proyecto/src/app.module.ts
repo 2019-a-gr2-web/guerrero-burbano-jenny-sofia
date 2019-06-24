@@ -8,6 +8,7 @@ import {ComboModule} from './combos/combo.module';
 import {ComboEntity} from './combos/combo.entity';
 import {RelacionEntity} from './combos/relacion.entity';
 import {PlatoEntity} from './platos/plato.entity';
+import {PlatoService} from './platos/plato.service';
 
 
 

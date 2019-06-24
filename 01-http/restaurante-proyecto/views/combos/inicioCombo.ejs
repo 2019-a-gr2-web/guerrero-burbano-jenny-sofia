@@ -56,8 +56,9 @@
                                 <button class="btn btn-info">Editar</button>
                             </td>
                         </form>
-                        <form action="/api/combo/verCombo">
+                        <form action="/api/combo/verCombo" method="post">
                             <td>
+                                <input id=id type="hidden" class="form-control" name="platoId" value="<%= plato.id %>">
                             <button class="btn btn-infor">ver combo</button>
                             </td>
                         </form>
