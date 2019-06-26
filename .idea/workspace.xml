@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4178c94f-8488-4c9e-9f47-fa14fb30f1f5" name="Default Changelist" comment="Ejemplos de operadores">
+      <change afterPath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/login.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/protegida.ejs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/01-http/03-DeberPágina/deber-pagina/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/01-http/03-DeberPágina/deber-pagina/views/inicioNpm.ejs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/01-http/Examen/examen/.gitignore" afterDir="false" />
@@ -55,10 +57,11 @@
       <change afterPath="$PROJECT_DIR$/01-http/restaurante-proyecto/views/combos/vistaCombo.ejs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/01-http/restaurante-proyecto/views/componentes/menu/menu.ejs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/01-http/restaurante-proyecto/views/platos/inicioPlatos.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/DTO/tragos.update.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/DTO/tragos.update.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/tragos/lista-tragos.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/tragos/lista-tragos.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -75,72 +78,77 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/combos/combo.controller.ts">
+        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="539">
-              <caret line="208" column="5" lean-forward="true" selection-start-line="182" selection-start-column="4" selection-end-line="208" selection-end-column="5" />
+            <state relative-caret-position="181">
+              <caret line="240" column="17" lean-forward="true" selection-start-line="240" selection-start-column="17" selection-end-line="240" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts">
+        <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/combos/combo.entity.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-93">
+            <state relative-caret-position="238">
+              <caret line="17" column="13" lean-forward="true" selection-end-line="37" selection-end-column="1" />
               <folding>
-                <element signature="e#0#41#0" expanded="true" />
+                <element signature="e#0#84#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/tragos/lista-tragos.ejs">
+        <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/combos/relacion.entity.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="32" column="12" lean-forward="true" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="99">
-              <caret line="52" column="29" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
+            <state relative-caret-position="255">
+              <caret line="15" column="17" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="15" selection-end-column="17" />
               <folding>
-                <element signature="e#0#42#0" expanded="true" />
+                <element signature="e#0#84#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.controller.ts">
+        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.entity.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="57" column="52" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/DTO/tragos.update.dto.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="206">
+              <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
               <folding>
-                <element signature="e#0#74#0" expanded="true" />
+                <element signature="e#0#85#0" expanded="true" />
+                <element signature="e#633#693#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/views/combos/inicioCombo.ejs">
+        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/protegida.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-603">
-              <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+            <state>
+              <caret column="23" selection-start-column="23" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/login.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/main.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -148,8 +156,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/DTO/tragos.create.dto.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="26" lean-forward="true" selection-start-line="6" selection-end-line="26" />
+            <state relative-caret-position="425">
+              <caret line="26" selection-start-line="6" selection-end-line="26" />
               <folding>
                 <element signature="e#0#74#0" expanded="true" />
               </folding>
@@ -165,8 +173,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/combos/combo.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="88" column="5" lean-forward="true" selection-start-line="86" selection-start-column="3" selection-end-line="88" selection-end-column="5" />
+            <state relative-caret-position="1343">
+              <caret line="88" column="5" selection-start-line="86" selection-start-column="3" selection-end-line="88" selection-end-column="5" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
@@ -195,12 +203,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/01-http/Examen/examen/src/Libros/libros.module.ts" />
-        <option value="$PROJECT_DIR$/01-http/Examen/examen/views/gestion/gAutor.ejs" />
-        <option value="$PROJECT_DIR$/01-http/Examen/examen/src/app.service.ts" />
-        <option value="$PROJECT_DIR$/01-http/Examen/examen/src/app.controller.ts" />
-        <option value="$PROJECT_DIR$/01-http/Examen/examen/src/main.ts" />
-        <option value="$PROJECT_DIR$/01-http/Examen/examen/views/gestion/crearLibro.ejs" />
         <option value="$PROJECT_DIR$/01-http/Examen/examen/views/gestion/gLibro.ejs" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.module.ts" />
         <option value="$PROJECT_DIR$/01-http/restaurante-proyecto/src/main.ts" />
@@ -246,14 +248,19 @@
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/DTO/tragos.update.dto.ts" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/tragos/lista-tragos.ejs" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.controller.ts" />
+        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts" />
+        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/sessions/62Wr97a4X3Idf3ViKLMpGi6Jh2LbTwyy.json" />
+        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/sessions/HDASMcQoB7yDRrWZ0MV8wA7vX5YkAMMu.json" />
+        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/login.ejs" />
+        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/protegida.ejs" />
+        <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1997" />
-    <option name="y" value="-19" />
-    <option name="width" value="1534" />
-    <option name="height" value="830" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="width" value="643" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -308,52 +315,6 @@
               <item name="guerrero-burbano-jenny-sofia" type="b2602c69:ProjectViewProjectNode" />
               <item name="guerrero-burbano-jenny-sofia" type="462c0819:PsiDirectoryNode" />
               <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
-              <item name="api-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="tragos" type="462c0819:PsiDirectoryNode" />
-              <item name="DTO" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guerrero-burbano-jenny-sofia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="guerrero-burbano-jenny-sofia" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
-              <item name="api-web" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guerrero-burbano-jenny-sofia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="guerrero-burbano-jenny-sofia" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
-              <item name="api-web" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="componentes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guerrero-burbano-jenny-sofia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="guerrero-burbano-jenny-sofia" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
-              <item name="api-web" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="componentes" type="462c0819:PsiDirectoryNode" />
-              <item name="menu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guerrero-burbano-jenny-sofia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="guerrero-burbano-jenny-sofia" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
-              <item name="api-web" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="tragos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guerrero-burbano-jenny-sofia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="guerrero-burbano-jenny-sofia" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
               <item name="restaurante-proyecto" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -377,46 +338,6 @@
               <item name="01-http" type="462c0819:PsiDirectoryNode" />
               <item name="restaurante-proyecto" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="platos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guerrero-burbano-jenny-sofia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="guerrero-burbano-jenny-sofia" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="restaurante-proyecto" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guerrero-burbano-jenny-sofia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="guerrero-burbano-jenny-sofia" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="restaurante-proyecto" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="combos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guerrero-burbano-jenny-sofia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="guerrero-burbano-jenny-sofia" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="restaurante-proyecto" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="componentes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guerrero-burbano-jenny-sofia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="guerrero-burbano-jenny-sofia" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="restaurante-proyecto" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="componentes" type="462c0819:PsiDirectoryNode" />
-              <item name="menu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guerrero-burbano-jenny-sofia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="guerrero-burbano-jenny-sofia" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="restaurante-proyecto" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="platos" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -430,7 +351,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/01-http/Examen/examen" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/GitHub/Proyecto-Web-Balcazar-Betancourt-Guerrero" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -442,19 +363,19 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
-    <property name="ts.external.directory.path" value="D:\GitHub\guerrero-burbano-jenny-sofia\01-http\Examen\examen\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="D:\GitHub\guerrero-burbano-jenny-sofia\01-http\ProjectoIndividual\projecto-individual\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitHub\guerrero-burbano-jenny-sofia\01-http\Examen\examen" />
+      <recent name="D:\GitHub\guerrero-burbano-jenny-sofia\01-http\03-DeberPágina\deber-pagina" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\GitHub\guerrero-burbano-jenny-sofia\01-http\restaurante-proyecto\views\componentes\menu" />
       <recent name="D:\GitHub\guerrero-burbano-jenny-sofia\01-http\02-servidor-web-nodejs\api-web\views\componentes\footer" />
       <recent name="D:\GitHub\guerrero-burbano-jenny-sofia\01-http\02-servidor-web-nodejs\api-web\views\componentes\menu" />
       <recent name="D:\GitHub\guerrero-burbano-jenny-sofia\01-http\restaurante-proyecto\src\combos\Interfaces" />
       <recent name="D:\GitHub\guerrero-burbano-jenny-sofia\01-http\restaurante-proyecto\src\platos" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\GitHub\guerrero-burbano-jenny-sofia\01-http\Examen\examen" />
-      <recent name="D:\GitHub\guerrero-burbano-jenny-sofia\01-http\03-DeberPágina\deber-pagina" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -523,7 +444,11 @@
       <workItem from="1561303445986" duration="4000" />
       <workItem from="1561303725488" duration="5521000" />
       <workItem from="1561323020481" duration="25317000" />
-      <workItem from="1561353135599" duration="7514000" />
+      <workItem from="1561353135599" duration="8107000" />
+      <workItem from="1561477344689" duration="165000" />
+      <workItem from="1561481922562" duration="19000" />
+      <workItem from="1561482475286" duration="4820000" />
+      <workItem from="1561565379361" duration="3738000" />
     </task>
     <task id="LOCAL-00001" summary="Ejemplos de operadores">
       <created>1556657194836</created>
@@ -536,7 +461,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="301800000" />
+    <option name="totallyTimeSpent" value="311135000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -548,10 +473,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-6" y="0" width="514" height="830" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22023809" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.8532495" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -568,7 +493,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3863248" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.33184522" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -581,6 +506,37 @@
       <window_info anchor="right" id="Palette" order="7" />
       <window_info anchor="right" id="Database" order="8" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.8532495" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Designer" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32794118" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.31470588" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TypeScript" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.33184522" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Palette" order="7" />
+      <window_info anchor="right" id="Database" order="8" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -606,38 +562,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/main.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="87" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="87" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/views/gestion/gLibro.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1348">
-          <caret line="96" column="6" lean-forward="true" selection-start-line="96" selection-start-column="6" selection-end-line="96" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/views/menu/menu.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-505" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/views/login/login.ejs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/node_modules/typeorm/repository/Repository.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1802">
-          <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/inicio.ejs">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -710,26 +634,6 @@
     <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/platos/plato.entity.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#84#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/combos/relacion.entity.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#84#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/combos/combo.entity.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
           <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
           <folding>
             <element signature="e#0#84#0" expanded="true" />
@@ -896,30 +800,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.entity.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#85#0" expanded="true" />
-            <element signature="e#633#693#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/componentes/menu/menu.ejs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3245">
-          <caret line="226" column="52" selection-start-line="226" selection-start-column="7" selection-end-line="226" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#174#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/platos/plato.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="107">
@@ -940,28 +820,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts">
+    <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/combos/combo.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-93">
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="3298">
+          <caret line="208" column="5" selection-start-line="182" selection-start-column="4" selection-end-line="208" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/combos/combo.service.ts">
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/tragos/lista-tragos.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="88" column="5" lean-forward="true" selection-start-line="86" selection-start-column="3" selection-end-line="88" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="544">
+          <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
+        <state relative-caret-position="748">
           <caret line="52" column="29" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
@@ -969,19 +844,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/DTO/tragos.create.dto.ts">
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="26" lean-forward="true" selection-start-line="6" selection-end-line="26" />
-          <folding>
-            <element signature="e#0#74#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="850">
+          <caret line="57" column="52" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/DTO/tragos.update.dto.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
+        <state relative-caret-position="425">
           <caret line="26" selection-start-line="26" selection-end-line="26" />
           <folding>
             <element signature="e#0#74#0" expanded="true" />
@@ -991,29 +863,106 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/views/combos/inicioCombo.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-603">
+        <state relative-caret-position="391">
           <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/combos/combo.controller.ts">
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/sessions/62Wr97a4X3Idf3ViKLMpGi6Jh2LbTwyy.json" />
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/sessions/HDASMcQoB7yDRrWZ0MV8wA7vX5YkAMMu.json" />
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/main.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="208" column="5" lean-forward="true" selection-start-line="182" selection-start-column="4" selection-end-line="208" selection-end-column="5" />
+        <state relative-caret-position="374">
+          <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#304#339#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/tragos/lista-tragos.ejs">
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/protegida.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="32" column="12" lean-forward="true" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
+        <state>
+          <caret column="23" selection-start-column="23" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.controller.ts">
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/login.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="57" column="52" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="52" />
+        <state relative-caret-position="204">
+          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/DTO/tragos.create.dto.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="26" selection-start-line="6" selection-end-line="26" />
+          <folding>
+            <element signature="e#0#74#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/views/componentes/menu/menu.ejs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/combos/combo.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1343">
+          <caret line="88" column="5" selection-start-line="86" selection-start-column="3" selection-end-line="88" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/app.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="240" column="17" lean-forward="true" selection-start-line="240" selection-start-column="17" selection-end-line="240" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/combos/combo.entity.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="13" lean-forward="true" selection-end-line="37" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#84#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/combos/relacion.entity.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="17" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="15" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#84#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/tragos/tragos.entity.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="33" column="22" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#85#0" expanded="true" />
+            <element signature="e#633#693#0" />
+          </folding>
         </state>
       </provider>
     </entry>
