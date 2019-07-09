@@ -8,23 +8,28 @@ import {FiestaEntity} from './fiesta/fiesta.entity';
 import {FiestaModule} from './fiesta/fiesta.module';
 import {DistribuidorModule} from './distribuidor/distribuidor.module';
 import {DistribuidorEntity} from './distribuidor/distribuidor.entity';
+import {ChatModule} from './chat/chat.module';
 
 @Module({
-  imports: [TragosModule,FiestaModule,DistribuidorModule,
+  imports: [
+    ChatModule,
+    // TragosModule,FiestaModule,DistribuidorModule,
+    //
+    // TypeOrmModule.forRoot({
+    //   name: 'default', //Nombre por defecto del TYPEORM
+    //   type: 'mysql',
+    //   host: 'localhost',
+    //   port: 3306,
+    //   username: 'root',
+    //   password: 'root',
+    //   database: 'test',
+    //   entities: [TragosEntity, FiestaEntity, DistribuidorEntity],
+    //   synchronize: true,
+    //   insecureAuth: true,
+    //
+    // }),
 
-    TypeOrmModule.forRoot({
-      name: 'default', //Nombre por defecto del TYPEORM
-      type: 'mysql',
-      host: 'localhost',
-      port: 3306,
-      username: 'root',
-      password: 'root',
-      database: 'test',
-      entities: [TragosEntity, FiestaEntity, DistribuidorEntity],
-      synchronize: true,
-      insecureAuth: true,
-
-    }),],
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
