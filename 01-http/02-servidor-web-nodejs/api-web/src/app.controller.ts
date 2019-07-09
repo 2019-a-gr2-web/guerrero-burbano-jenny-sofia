@@ -10,7 +10,7 @@ import {
     Param,
     Body,
     Request,
-    Response
+    Response, Session, Res
 } from '@nestjs/common';
 import {AppService} from './app.service';
 
@@ -227,6 +227,47 @@ export class AppController {
         return res.render('peliculas/estilos', { });
         // me devuelve TRUE
     }
+    @Get('session')
+    session(@Query('nombre') nombre, @Session() session ){
+        console.log(session)
+        const x= session.nombreUsuario
+        session.nombreUsuario[0]
+        console.log(session.nombreUsuario[0])
+        const array=[1,2,3]
+        session.autenticado= true
+        session.nombreUsuario = array
+        return 'ok'
+    }
+    @Get('login')
+    loginVista(@Response() res){
+        res.render('login',{});
+    }
+
+    @Post('login')
+    login(@Res() res,@Body() usuario,@Session() session){
+        if(usuario.username =='Cesar' && usuario.password=='12345678'){
+            session.username=usuario.username;
+            session.password=usuario.password;
+            res.redirect('/api/protegida');
+        }else{
+            res.status(400);
+            res.send({mensaje:'Error login',error:400});
+        }
+    }
+
+    @Get('protegida')
+    protegida(
+        @Session() session,
+        @Res() res
+    ){
+        if(session.username){ //si es que existe la sesion significa que estamos logeados
+            res.render('protegida',{nombre:session.username});
+        }else{
+            res.redirect('login');
+        }
+    }
+
+
 
 
     // js -> ts
