@@ -10,12 +10,13 @@ import {
     Param,
     Body,
     Request,
-    Response, Session, Res
+    Response, Session, Res, Render, UseInterceptors, UploadedFile
 } from '@nestjs/common';
 import {AppService} from './app.service';
 
 
 import * as Joi from '@hapi/joi';
+import {FileInterceptor} from '@nestjs/platform-express';
 
 // const Joi = require('@hapi/joi');
 
@@ -265,6 +266,34 @@ export class AppController {
         }else{
             res.redirect('login');
         }
+    }
+    @Get('subirArchivo/:idTrago')
+    @Render('archivo')
+    subirArchivo(
+        @Param('idTrago') idTrago){
+        return {
+            idTrago: idTrago
+        };
+        
+    }
+    @Post('subirArchivo/:idTrago')
+    @UseInterceptors(
+        FileInterceptor(
+            'imagen',
+            {
+                dest: __dirname+'/../archivos'
+            }
+        )
+    )
+    subirArchivoPost(@Param('idTrago') idTrago, @UploadedFile() archivo){
+        console.log(archivo)
+        return {mensaje: 'ok'}
+    }
+    @Get('descargarArchivo/:idTrago')
+    descargarArchivo(@Param() param, @Res() res){
+        const originalname='Particionamiento.pptx'
+        const path='D:\\GitHub\\guerrero-burbano-jenny-sofia\\01-http\\02-servidor-web-nodejs\\api-web\\archivos\\ef166a987f47b99ac9a7c53850c56b37'
+        res.download(path, originalname)
     }
 
 
