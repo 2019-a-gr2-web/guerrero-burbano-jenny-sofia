@@ -10,11 +10,18 @@ export class ChatGateway {
 
     @WebSocketServer() server;
 
+
     constructor() {
         console.log(this.server);
     }
 
     //SERVIDOR
+    @SubscribeMessage('adiviname')
+    adiviname(cliente:Client | any, data: any){
+        console.log("LLEGUE AL GATEWARY", data )
+        cliente.broadcast.emit('hola', data)
+        return  data
+    }
 
     @SubscribeMessage('holaMundo')
     holaMundo(client: Client | any, data: any) {
@@ -25,4 +32,5 @@ export class ChatGateway {
         client.broadcast.emit('saludaron', data);// broadcast a todos los sockets del servidor
         return 'Hola: ' + data.nombre;
     }
+
 }
