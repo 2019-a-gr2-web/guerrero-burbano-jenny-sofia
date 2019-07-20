@@ -56,7 +56,6 @@
       <change afterPath="$PROJECT_DIR$/01-http/restaurante-proyecto/views/componentes/menu/menu.ejs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/01-http/restaurante-proyecto/views/platos/inicioPlatos.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/chat/chat.gateway.ts" beforeDir="false" afterPath="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/src/chat/chat.gateway.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -126,8 +125,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/publico/webSockets/juego.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="63" column="47" selection-start-line="63" selection-start-column="47" selection-end-line="63" selection-end-column="47" />
+            <state relative-caret-position="293">
+              <caret line="65" column="8" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -252,7 +251,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="1939" />
@@ -459,7 +458,7 @@
       <workItem from="1562786503907" duration="5869000" />
       <workItem from="1563217907383" duration="1490000" />
       <workItem from="1563372677462" duration="13141000" />
-      <workItem from="1563572748580" duration="3670000" />
+      <workItem from="1563572748580" duration="4203000" />
     </task>
     <task id="LOCAL-00001" summary="Ejemplos de operadores">
       <created>1556657194836</created>
@@ -472,7 +471,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="349593000" />
+    <option name="totallyTimeSpent" value="350126000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -832,8 +831,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/publico/webSockets/juego.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="63" column="47" selection-start-line="63" selection-start-column="47" selection-end-line="63" selection-end-column="47" />
+        <state relative-caret-position="293">
+          <caret line="65" column="8" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="8" />
         </state>
       </provider>
     </entry>
