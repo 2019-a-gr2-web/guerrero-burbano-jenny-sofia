@@ -9,10 +9,12 @@ import {FiestaModule} from './fiesta/fiesta.module';
 import {DistribuidorModule} from './distribuidor/distribuidor.module';
 import {DistribuidorEntity} from './distribuidor/distribuidor.entity';
 import {ChatModule} from './chat/chat.module';
+import {JuegoModule} from './juego/juego.module';
 
 @Module({
   imports: [
     ChatModule,
+      JuegoModule
     // TragosModule,FiestaModule,DistribuidorModule,
     //
     // TypeOrmModule.forRoot({

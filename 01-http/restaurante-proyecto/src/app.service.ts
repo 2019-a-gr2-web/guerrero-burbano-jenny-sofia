@@ -7,6 +7,9 @@ import {PlatoService} from './platos/plato.service';
 export class AppService {
   platoSeleccionados: any[]=[]
   platosDisponibles: any[]=[]
+  listaCombos: any[]=[]
+  listaPlatos: any[]=[]
+
   constructor(){
 
   }

@@ -29,6 +29,8 @@ export class ComboController {
     @Get('lista')
     async listaCombos(@Res() res) {
         const arregloCombos = await this._combosService.buscar()
+
+        this._appService.listaCombos = arregloCombos
         res.render('combos/inicioCombo', {arregloCombos});
 
     }

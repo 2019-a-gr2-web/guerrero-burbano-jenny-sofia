@@ -2,26 +2,19 @@ import {SubscribeMessage, WebSocketGateway, WebSocketServer} from '@nestjs/webso
 import {Client} from 'socket.io';
 
 // ws://localhost:3001/websockets
-@WebSocketGateway(3010,
+@WebSocketGateway(3011,
     {
-        namespace: '/websockets'
+        namespace: '/websocketsjuego'
     })
-export class ChatGateway {
+export class JuegoGateway {
 
     @WebSocketServer() server;
-
 
     constructor() {
         console.log(this.server);
     }
 
     //SERVIDOR
-    @SubscribeMessage('adiviname')
-    adiviname(cliente:Client | any, data: any){
-        console.log("LLEGUE AL GATEWARY", data )
-        cliente.broadcast.emit('hola', data)
-        return  data
-    }
 
     @SubscribeMessage('holaMundo')
     holaMundo(client: Client | any, data: any) {
@@ -32,5 +25,4 @@ export class ChatGateway {
         client.broadcast.emit('saludaron', data);// broadcast a todos los sockets del servidor
         return 'Hola: ' + data.nombre;
     }
-
 }

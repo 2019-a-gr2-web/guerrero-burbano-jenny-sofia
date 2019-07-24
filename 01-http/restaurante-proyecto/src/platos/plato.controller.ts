@@ -6,15 +6,18 @@ import {TragosCreateDto} from '../../../02-servidor-web-nodejs/api-web/src/trago
 import {Plato} from './Interfaces/plato';
 import {PlatoCreateDto} from './DTO/plato.create.dto';
 import {validate} from 'class-validator';
+import {AppService} from '../app.service';
 
 @Controller('/api/plato')
 export class PlatoController{
-    constructor(private readonly _platosService: PlatoService) {
+    constructor(private readonly _platosService: PlatoService, private readonly appService: AppService) {
 
     }
     @Get('lista')
     async listaPlatos(@Res() res) {
         const arregloPlatos = await this._platosService.buscar()
+        this.appService.listaPlatos=await  this._platosService.buscar()
+
 
         res.render('platos/inicioPlatos', {arregloPlatos});
     }

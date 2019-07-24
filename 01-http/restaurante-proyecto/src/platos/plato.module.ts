@@ -6,6 +6,7 @@ import {RelacionEntity} from '../combos/relacion.entity';
 import {PlatoController} from './plato.controller';
 import {PlatoService} from './plato.service';
 import {ComboModule} from '../combos/combo.module';
+import {AppService} from '../app.service';
 
 @Module(
     {
@@ -21,7 +22,7 @@ import {ComboModule} from '../combos/combo.module';
 
         ], // Módulos
         controllers: [PlatoController],
-        providers: [PlatoService], // servicios
+        providers: [PlatoService, AppService], // servicios
         exports: [PlatoService], // Exportar servicios
     },
 )

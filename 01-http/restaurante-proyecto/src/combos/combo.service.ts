@@ -8,6 +8,7 @@ import {Combo} from './Interfaces/combo';
 import {Relacion} from './Interfaces/relacion'
 import {RelacionEntity} from './relacion.entity';
 import {Libro} from '../../../Examen/examen/src/Libros/interfaces/libro';
+import {AppService} from '../app.service';
 
 @Injectable()
 export class ComboService {
@@ -15,7 +16,7 @@ export class ComboService {
     constructor(@InjectRepository(ComboEntity)
                 private readonly _combosRepository: Repository<ComboEntity>,
                 @InjectRepository(RelacionEntity)
-                private readonly  _relacionRepository: Repository<RelacionEntity>,
+                private readonly  _relacionRepository: Repository<RelacionEntity>,private readonly appService: AppService
     ) {
 
 
@@ -24,13 +25,19 @@ export class ComboService {
     // buscarPlatos(parametrosBusqueda?):Promise<any>{
     //   return this._platosRepository.find(parametrosBusqueda)
     //}
-    buscar(parametrosBusqueda?): Promise<any> {
+    buscar(parametrosBusqueda?) {
         if (parametrosBusqueda) {
-            return this._combosRepository.find({
-                where: [
-                    {nombre: parametrosBusqueda}
-                ]
-            })
+            var x=this.appService.listaCombos.filter(
+                value => {
+
+                    return value.nombre.toUpperCase().includes(parametrosBusqueda.toString().toUpperCase())
+
+                }
+            )
+
+            console.log("lista", x)
+            console.log("lista2", this.appService.listaPlatos)
+            return x
         } else {
             return this._combosRepository.find()
         }

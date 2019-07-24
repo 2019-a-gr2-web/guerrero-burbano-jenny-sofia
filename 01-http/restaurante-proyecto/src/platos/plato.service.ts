@@ -11,23 +11,33 @@ import any = jasmine.any;
 import {error} from 'util';
 import {RelacionEntity} from '../combos/relacion.entity';
 import {ComboEntity} from '../combos/combo.entity';
+import {AppService} from '../app.service';
+
 
 @Injectable()
 export class PlatoService {
     query:string
     constructor(@InjectRepository(PlatoEntity)
-                private readonly _platosRepository: Repository<PlatoEntity>,) {
+                private readonly _platosRepository: Repository<PlatoEntity>,private readonly appService: AppService) {
 
 
     }
-    buscar(parametrosBusqueda?):Promise<any>{
+    buscar(parametrosBusqueda?){
+        console.log(parametrosBusqueda)
         if (parametrosBusqueda) {
-            return this._platosRepository.find({
-                where: [
-                    {nombre: parametrosBusqueda}
-                ]
-            })
+            var x=this.appService.listaPlatos.filter(
+                value => {
+
+                    return value.nombre.toUpperCase().includes(parametrosBusqueda.toString().toUpperCase())
+
+                }
+            )
+
+            console.log("lista", x)
+            console.log("lista2", this.appService.listaPlatos)
+            return x
         } else {
+
             return this._platosRepository.find()
         }
     }

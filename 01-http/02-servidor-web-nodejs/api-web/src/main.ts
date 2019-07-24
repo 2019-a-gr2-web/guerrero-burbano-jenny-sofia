@@ -28,7 +28,7 @@ async function bootstrap() {
     app.set('view engine', 'ejs');
     // app.set('view engine', 'ejs');
     app.use(express.static('publico'));
-    await app.listen(3010);
+    await app.listen(3001);
 }
 
 bootstrap();
