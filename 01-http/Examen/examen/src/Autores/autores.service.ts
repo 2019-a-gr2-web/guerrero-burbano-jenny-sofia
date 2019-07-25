@@ -14,6 +14,9 @@ export class AutoresService {
         this.appService.bdAutores.push(nuevoAutor)
         this.idnum++
     }
+    autenticar(user: String, password: String){
+
+    }
     encontrar(nombreTmp){
         console.log(nombreTmp.toString())
         const arreglo= this.appService.bdAutores.filter(

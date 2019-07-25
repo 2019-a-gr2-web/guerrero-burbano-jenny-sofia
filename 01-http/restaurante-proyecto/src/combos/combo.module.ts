@@ -17,8 +17,6 @@ import {PlatoModule} from '../platos/plato.module';
                 ],
                 'default'
             ),PlatoModule
-
-
         ], // Módulos
         controllers: [ComboController],
         providers: [ComboService,AppService], // servicios

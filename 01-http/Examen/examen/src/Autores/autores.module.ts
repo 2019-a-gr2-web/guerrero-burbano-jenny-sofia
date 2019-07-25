@@ -6,10 +6,21 @@ import {AutoresService} from './autores.service';
 import {LibrosController} from '../Libros/libros.controller';
 import {LibrosService} from '../Libros/libros.service';
 import {AppService} from '../../../../Examen/examen/src/app.service';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import {ComboEntity} from '../../../../restaurante-proyecto/src/combos/combo.entity';
+import {RelacionEntity} from '../../../../restaurante-proyecto/src/combos/relacion.entity';
+import {AutorEntity} from './autor.entity';
 
 @Module(
     {
-        imports: [],
+        imports: [
+            TypeOrmModule.forFeature(
+                [
+                    AutorEntity
+                ],
+                'default'
+            )
+        ],
         controllers: [AutoresController],
         providers: [AutoresService, AppService],
         exports:[AutoresService]

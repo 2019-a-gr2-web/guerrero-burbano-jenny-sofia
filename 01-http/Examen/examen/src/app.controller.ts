@@ -1,5 +1,6 @@
-import {Body, Controller, Get, Post, Req, Res} from '@nestjs/common';
+import {Body, Controller, Get, Post, Req, Res, Session} from '@nestjs/common';
 import {AppService} from './app.service';
+import {Usuario} from './usuario/interfaces/usuario';
 
 
 @Controller('/api')
@@ -61,17 +62,19 @@ export class AppController {
         const tempNombre = this.appService.nombre;
 
 
-            res.cookie(
-                "nombreUsuario", nombre.nombre, {
-                    signed: true
-                }
-            )
-            console.log(this.appService.nombre)
 
+            // res.cookie(
+            //     "nombreUsuario", nombre.nombre, {
+            //         signed: true
+            //     }
+            // )
+            // console.log(this.appService.nombre)
+            //
 
             return res.render('menu/menu', {tempNombre})
 
     }
+
 
 
 }
