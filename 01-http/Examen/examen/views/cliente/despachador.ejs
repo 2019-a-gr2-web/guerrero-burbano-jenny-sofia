@@ -15,7 +15,25 @@
     <script src='/socket.io.js' type='text/javascript'></script>
 </head>
 <body>
+<button onclick="recargap()">RECARGAME</button>
+<script>
+    function recargap() {
 
+        const nombreMetodo ='recarga';
+        const datos = {
+            accion: 'recargar'
+
+        };
+        socket.emit(
+            nombreMetodo,
+            datos,
+            (respuesta) => {
+                console.log(respuesta)
+            }
+        );
+
+    }
+</script>
 <% if(pedidos.length > 0){ %>
     <h1>holaa</h1>
 <% } %>
@@ -27,33 +45,45 @@
                 <h2 class="card-title text-center">Despacha pedidos</h2>
 
                 <table class="table table-striped" id="tableRow">
-                    <th>Nombre comprador</th>
-                    <th>Estado</th>
-                    <th>Total</th>
-                    <th></th>
-                    </tr>
-                    <% pedidos.forEach((pedido)=>{ %>
+                    <thead>
                     <tr>
-                        <td><%= pedido.nombreUsuario %></td>
-                        <td><%= pedido.estadoPedido %></td>
-                        <td><%= pedido.totalConImpuesto %></td>
+                        <th>Nombre comprador</th>
+                        <th>Estado</th>
+                        <th>Total</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <% pedidos.forEach((pedido)=>{ %>
+                        <tr id="<%= pedido.ipPedido %>  ">
+                            <td><%= pedido.ipPedido %></td>
+                            <td><%= pedido.estadoPedido %></td>
+                            <td><%= pedido.totalConImpuesto %></td>
 
-                        <td>
-                            <form action="/api/despachador/despachar-pedido"
-                                  method="post">
+                            <td>
+                                                            <form action="/api/pedido/despachar/<%= pedido.ipPedido %>"
+                                                                  method="post">
                                 <label for="idPedido"></label>
                                 <input id="idPedido" type="text" name="idPedido" value="<%= pedido.idPedido %>" hidden>
-                                <button>Despachar</button>
-                            </form>
-                        </td>
-
-                    </tr>
+                                <button onclick="recargap()" type="submit">Despachar</button>
+                                                            </form>
+                            </td>
+                        </tr>
                     <% }) %>
+                    </tbody>
+
                 </table>
             </div>
         </div>
     </div>
 </div>
+<script>
+    function remover(rowid) {
+        var row = document.getElementById("181");
+        console.log(row)
+        row.parentNode.removeChild(row);
+    }
+</script>
 <div class="col-sm-1"></div>
 </div>
 
@@ -72,8 +102,29 @@
         }
     );
     socket.on(
+        'recarga', //nombre del evento
+        (data) => {
+            console.log('Estamos recargados', data);
+
+            location.reload()
+            //socket.disconnect();
+            //socket.connect()
+        }
+    );
+    socket.on(
+        'saludaron', //nombre del evento
+        (data) => {
+            console.log('Estamos recargados', data);
+
+            location.reload()
+            //socket.disconnect();
+            //socket.connect()
+        }
+    );
+    socket.on(
         'comprado',
         (pedido) => {
+
             const tableRow = 'tableRow';
             const contenedor = document.getElementById(tableRow);
             const etiqueta = 'tr';
@@ -89,8 +140,13 @@
                 ${pedido.totalConImpuesto}
              </td>
              <td>
-                 <button class="btn btn-info">Despachar</button>
+                            <form action="/api/pedido/despachar/${pedido.idPedido}" method="post">
+                                <label for="idPedido"></label>
+                                <input id="idPedido" type="text" name="idPedido" value="${pedido.id}" hidden>
+                                <button onclick="recargap()" type="submit" class="btn btn-success">Despachar</button>
+                            </form>
              </td>
+
 
 `;
             linea.innerHTML = contenidoHTML;
@@ -102,6 +158,7 @@
         contenedor.appendChild(elementoHTML);
     }
 </script>
+
 
 </body>
 </html>

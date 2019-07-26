@@ -97,6 +97,11 @@ export class PedidoService {
         console.log("LLEGUE A EDITAR", pedidoEditar)
         return this._pedidosRepository.update(pedidoEditar.ipPedido, pedidoEditar)
     }
+    async despachar(idPedido: number){
+        var pedido:Pedido=await this._pedidosRepository.findOne({where: {ipPedido: idPedido}})
+        pedido.estadoPedido="Despachado"
+        return this._pedidosRepository.update(idPedido, pedido)
+    }
 
     buscarUsuario(parametrosBusqueda?):Promise<PedidoEntity[]>{
         return this._pedidosRepository.find(parametrosBusqueda);

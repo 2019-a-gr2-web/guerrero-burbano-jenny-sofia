@@ -8,6 +8,8 @@ import {connectableObservableDescriptor} from 'rxjs/internal/observable/Connecta
 import {Libro} from '../Libros/interfaces/libro';
 import {LibroAux} from './interfaces/libroAux';
 import {LibroEntity} from '../Libros/libro.entity';
+import {getConnection} from 'typeorm';
+import {PedidoEntity} from './pedido.entity';
 
 
 @Controller('/api/pedido')
@@ -94,6 +96,11 @@ export class PedidoController {
 
         res.render('cliente/despachador', {pedidos})
     }
+    @Post('despachar/:idPedido')
+    async despachar(@Res() res, @Param() params){
+        var pedidoDespachar= await this._pedidoService.despachar(params.idPedido)
+        res.redirect('/api/pedido/cargarDespachador')
+    }
     @Post('editar')
     async editar(@Res() res, @Body() pedido:Pedido){
         console.log("ESTE ES MI PEDIDO",pedido)
@@ -110,7 +117,7 @@ export class PedidoController {
 
         }catch (e) {
             console.log("ERRORDEF", e)
-            res.redirect('/api/pedido/menu_cliente');
+            res.redirect('/api/usuario/menu_cliente');
 
         }
 

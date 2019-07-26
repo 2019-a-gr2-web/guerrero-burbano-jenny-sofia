@@ -5,7 +5,7 @@ import {Client} from 'socket.io';
 @WebSocketGateway(3010,
     {
         namespace: '/websockets'
-    })
+})
 export class ClienteGateway {
 
     @WebSocketServer() server;
@@ -31,6 +31,16 @@ export class ClienteGateway {
 
         client.broadcast.emit('saludaron', data);// broadcast a todos los sockets del servidor
         return 'Hola: ' + data.nombre;
+    }
+    @SubscribeMessage('recarga')
+    recargarPAgina(client: Client | any, data: any) {
+        console.log("AQUI  VA A REGARGAR LA PAGINA")
+        console.log(data);
+        console.log('Nos hacen la peticion');
+        //console.log("server: ",this.server);
+
+        client.broadcast.emit('recarga', data);// broadcast a todos los sockets del servidor
+        return 'Hola' ;
     }
     @SubscribeMessage('realizoPedido')
     findAll(client:Client | any,data:any){

@@ -14,14 +14,38 @@
 
 </head>
 <body>
+<button onclick="recarga()"></button>
+<script>
+    function recarga() {
+
+        const nombreMetodo ='recarga';
+        const datos = {
+            accion: 'recargar'
+
+        };
+        socket.emit(
+            nombreMetodo,
+            datos,
+            (respuesta) => {
+                console.log(respuesta)
+            }
+        );
+
+    }
+</script>
+
 
 <div>
     <legend>Estado: <%= pedidoNuevo.estadoPedido %></legend>
+    <input id="idPedido" value="<%=pedidoNuevo.ipPedido%>">
 </div>
 <div>
 
 </div>
 <button id="mostrar" class="btn btn-success pull-right">REALIZAR COMPRA</button>
+<form action="/api/usuario/menu_cliente">
+<button id="mostrar" class="btn btn-success">REGRESAR AL MENÚ</button>
+</form>
 <script>
     var button = document.getElementById('mostrar'); // Assumes element with id='button'
 
@@ -59,7 +83,7 @@
             </div>
             <div class="col-md-6">
                 <label for="totalCon">Total con impuestos:</label>
-                <input type="password" class="form-control" id="totalCon" name="totalConImpuesto">
+                <input type="text" class="form-control" id="totalCon" name="totalConImpuesto" value="<%= total*1.12%>">
             </div>
             <div class="col-md-12 ">
                 <button type="submit" onclick="realizarPedido()" class="btn btn-success pull-right">COMPRAR</button>
@@ -72,12 +96,14 @@
 </div>
 
 <script>
+
     function realizarPedido() {
 
         const nombreUsuario = document.getElementById("nombreUsr").value;
         const ciUsuario = document.getElementById("ciUsr").value;
         const direccionUsuario = document.getElementById("direccion").value;
         const telefonoUsuario = document.getElementById("telefono").value;
+        const idPedido= document.getElementById("idPedido").value
         const nombreMetodo = 'realizoPedido';
         const datos = {
             nombreUsuario: nombreUsuario,
@@ -86,7 +112,9 @@
             telefonoUsuario: telefonoUsuario,
             totalSinImpuesto: 12.3,
             totalConImpuesto: 10.1,
-            estadoPedido: 'Por despachar'
+            estadoPedido: 'Por despachar',
+            idPedido: idPedido
+
         };
         socket.emit(
             nombreMetodo,
