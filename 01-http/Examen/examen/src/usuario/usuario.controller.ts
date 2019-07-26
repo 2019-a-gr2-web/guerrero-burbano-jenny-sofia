@@ -29,16 +29,17 @@ export class UsuarioController {
                 console.log("aDMINISTRADOR!!!!!!!")
                 return res.render('menu/menu', {tempNombre})
             }else if(valor.tipoUsuario=="Despachador"){
+
                 console.log("  DESPACHADOR")
+                res.redirect('/api/pedido/cargarDespachador')
+
             }else{
                 console.log("  CLIENTE")
+                this._pedidoService.librosSeleccionados=[]
                 const pedidoNuevo=await this._pedidoService.crearPedido()
-                const listaLibros= await this._pedidoService.getLibros()
-                const listaAutores= await  this._pedidoService.getAutores()
-
 
                // const pedido=
-                return res.render('cliente/pedido',{pedidoNuevo, listaLibros, listaAutores})
+                return res.redirect('/api/pedido/realizarPedidos/'+pedidoNuevo.ipPedido+'/-1/'+0)
             }
 
 

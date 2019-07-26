@@ -25,7 +25,7 @@ export class LibrosController {
         this.librosService.eliminar(body.id)
         const arregloHijos= this.appService.bdLibros.filter(
             value => {
-                return value.autorId==body.idAutor
+                return value.autor==body.idAutor
             }
         )
         const id= body.idAutor
@@ -45,15 +45,15 @@ export class LibrosController {
     crear(@Res() res, @Body() libro:Libro, @Req() req){
 
 
-        console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!", libro.autorId)
+        console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!", libro.autor)
         this.librosService.crear(libro);
         const arregloHijos= this.appService.bdLibros.filter(
             value => {
-                return value.autorId==libro.autorId
+                return value.autor==libro.autor
             }
         )
 
-        const id=libro.autorId
+        const id=libro.autor
         const tempNombre=req.signedCookies.nombreUsuario
         if(tempNombre){
         return res.render('gestion/gLibro', {arregloHijos, tempNombre, id})

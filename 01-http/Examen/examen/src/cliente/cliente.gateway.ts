@@ -32,5 +32,11 @@ export class ClienteGateway {
         client.broadcast.emit('saludaron', data);// broadcast a todos los sockets del servidor
         return 'Hola: ' + data.nombre;
     }
+    @SubscribeMessage('realizoPedido')
+    findAll(client:Client | any,data:any){
+        console.log("LLEGUE AL CLIENTE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1")
+        client.broadcast.emit('comprado',data);
+        return 'Hola '+ data.nombre;
+    }
 
 }

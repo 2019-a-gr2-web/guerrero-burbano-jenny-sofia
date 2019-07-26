@@ -21,20 +21,32 @@
 <div>
 
 </div>
-<div>
-    <form action="/api/pedido/editar">
+<button id="mostrar" class="btn btn-success pull-right">REALIZAR COMPRA</button>
+<script>
+    var button = document.getElementById('mostrar'); // Assumes element with id='button'
+
+    button.onclick = function() {
+        var div = document.getElementById('formPedido');
+        if (div.style.display !== 'none') {
+            div.style.display = 'none';
+        }
+        else {
+            div.style.display = 'block';
+        }
+    };
+</script>
+<div id="formPedido" style="display: none">
+    <form action="/api/pedido/editar"
+          method="post">
+        <label for="telefono">ID:</label>
+        <input type="text" class="form-control" id="telefono" name="ipPedido" value="<%= pedidoNuevo.ipPedido %>">
         <div class="col-md-6">
             <label for="nombreUsr">Nombre:</label>
             <input type="text" class="form-control" id="nombreUsr" name="nombreUsuario">
-
-
             <label for="direccion">Direccion:</label>
             <input type="text" class="form-control" id="direccion" name="direccionUsuario">
-
-
             <label for="telefono">Teléfono:</label>
             <input type="text" class="form-control" id="telefono" name="telefonoUsuario">
-
 
         </div>
         <div class="col-md-6">
@@ -44,14 +56,14 @@
             </div>
             <div class="col-md-6">
                 <label for="totalSin">Total sin impuestos:</label>
-                <input type="text" class="form-control" id="totalSin" name="totalSinImpuesto">
+                <input type="text" class="form-control" id="totalSin" name="totalSinImpuesto" value="<%= total%>">
             </div>
             <div class="col-md-6">
                 <label for="totalCon">Total con impuestos:</label>
                 <input type="password" class="form-control" id="totalCon" name="totalConImpuesto">
             </div>
             <div class="col-md-12 ">
-                <button class="btn btn-success pull-right">COMPRAR</button>
+                <button type="submit" onclick="realizarPedido()" class="btn btn-success pull-right">COMPRAR</button>
             </div>
 
 
@@ -59,6 +71,34 @@
 
     </form>
 </div>
+
+<script>
+    function realizarPedido() {
+
+        const nombreUsuario = document.getElementById("nombreUsr").value;
+        const ciUsuario = document.getElementById("ciUsr").value;
+        const direccionUsuario = document.getElementById("direccion").value;
+        const telefonoUsuario = document.getElementById("telefono").value;
+        const nombreMetodo = 'realizoPedido';
+        const datos = {
+            nombreUsuario: nombreUsuario,
+            ciUsuario: ciUsuario,
+            direccionUsuario: direccionUsuario,
+            telefonoUsuario: telefonoUsuario,
+            totalSinImpuesto: 12.3,
+            totalConImpuesto: 10.1,
+            estadoPedido: 'Por despachar'
+        };
+        socket.emit(
+            nombreMetodo,
+            datos,
+            (respuesta) => {
+                console.log(respuesta)
+            }
+        );
+
+    }
+</script>
 <div style="color:white; size:40px">hola</div>
 <br>
 <div class="panel panel-info">
@@ -66,18 +106,19 @@
         SELECCION ARTÍCULOS
     </div>
 </div>
-<input id="lista" type="text" value="<%= listaLibros %>">
-<button id="titulo">titulo</button>
+
 <script>
     const titulo = document.getElementById('lista')
-    titulo.onclick=() =>{
+    titulo.onclick = () => {
 
         titulo.length
-      
+
         alert("bien")
 
     }
 </script>
+<div style="color: white; height: 14px">ssssddddddddddddddddddddddddddddddddd
+</div>
 <div class="panel-body">
     <div class="col-md-6">
         <legend>Articulos dispnibles</legend>
@@ -94,26 +135,24 @@
 
             <% listaLibros.forEach((libro)=>{ %>
                 <tr>
-                    <form action="/api/plato/editar" method="post">
+                    <form action="/api/pedido/addPedido" method="post">
 
                         <td><input id="nombreId" type="text" class="form-control" name="nombre"
                                    value="<%= libro.ICBN %>"></td>
                         <td><input id="descripcionId" type="text" class="form-control" name="descripcion"
                                    value="<%= libro.nombre %>"></td>
                         <td><input id="precioId" type="text" class="form-control" name="precio"
-                                   value="<%= libro.numeroPaginas %>">
-                            <input id="Id" type="hidden" class="form-control" name="id" value="<%= libro.id %>">
-                        </td>
+                                   value="<%= libro.precio %>">
 
-                        <td>
-                            <button class="btn btn-info">Editar</button>
                         </td>
-                    </form>
-                    <td>
-                        <form action="/api/plato/eliminar" method="post">
+                        <td>
                             <input id="Id" type="hidden" class="form-control" name="id" value="<%= libro.id %>">
-                            <button class="btn btn-danger">Eliminar</button>
-                        </form>
+                            <input id="idPedido" type="hidden" class="form-control" name="idPedido" value="<%= pedidoNuevo.ipPedido %>">
+
+                            <button type="submit" class="btn btn-default btn-sm">
+                                <span class="glyphicon glyphicon-plus"></span> Plus
+                            </button>
+                    </form>
                     </td>
 
                 </tr>
@@ -124,6 +163,41 @@
     </div>
     <div class="col-md-6">
         <legend>Articulos seleccionados</legend>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <% librosSeleccionados.forEach((libro)=>{ %>
+                <tr>
+                    <form action="/api/pedido/addPedido" method="post">
+
+                        <td><input id="nombreId" type="text" class="form-control" name="nombre"
+                                   value="<%= libro.nombre %>"></td>
+                        <td><input id="descripcionId" type="text" class="form-control" name="descripcion"
+                                   value="<%= libro.precio %>"></td>
+                        <td><input id="precioId" type="text" class="form-control" name="precio"
+                                   value="<%= libro.cantidad %>">
+
+                        </td>
+                        <td>
+                            <input id="Id" type="hidden" class="form-control" name="id" value="<%= libro.id %>">
+                            <button type="submit" class="btn btn-default btn-sm">
+                                <span class="glyphicon glyphicon-plus"></span> Plus
+                            </button>
+                    </form>
+                    </td>
+
+                </tr>
+            <% }) %>
+
+            </tbody>
+        </table>
     </div>
 
 </div>

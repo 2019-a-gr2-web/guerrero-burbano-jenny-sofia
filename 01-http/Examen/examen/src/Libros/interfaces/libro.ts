@@ -6,5 +6,6 @@ export interface Libro {
     edicion: number,
     fechaPublicacion:Date,
     nombreEditorial: string,
-    autorId: number
+    precio:number,
+    autor: number
 }

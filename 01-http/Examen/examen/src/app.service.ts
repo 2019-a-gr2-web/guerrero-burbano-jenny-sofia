@@ -9,6 +9,7 @@ export class AppService {
   id: number=0
   bdAutores: Autor[]=[]
   bdLibros: Libro[]=[]
+  librosSeleccionados: Libro[]= []
   constructor(){
     const auxAutor: Autor={
       id: 2,

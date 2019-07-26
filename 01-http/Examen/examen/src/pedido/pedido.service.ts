@@ -7,10 +7,14 @@ import {AutorEntity} from '../Autores/autor.entity';
 import {LibroEntity} from '../Libros/libro.entity';
 import {AutorLibro} from './interfaces/autorLibro';
 import {Libro} from '../Libros/interfaces/libro';
+import {LibroAux} from './interfaces/libroAux';
 
 @Injectable()
 export class PedidoService {
 
+    librosSeleccionados: LibroAux[]=[]
+    idAutorSeleccionado: number
+    idPedidoSeleccionado: number
     constructor(@InjectRepository(PedidoEntity)
                 private readonly _pedidosRepository: Repository<PedidoEntity>,@InjectRepository(AutorEntity)
     private readonly _autorRepository: Repository<AutorEntity>, @InjectRepository(LibroEntity)
@@ -33,9 +37,19 @@ export class PedidoService {
         return this._pedidosRepository.find()
 
     }
-    getLibros(){
-        return this._libroRepository.find()
+    getLibros(idAutor:number){
+        return this._libroRepository.find({where: {autor: idAutor}})
 
+    }
+    getLibroEspecifico(idLibro){
+        return this._libroRepository.findOne({where: {id: idLibro}})
+    }
+    getPedidoEspecifico(idPedido){
+
+        return this._pedidosRepository.findOne({where: {ipPedido: idPedido }})
+    }
+    getPedido(){
+        return this._pedidosRepository.find()
     }
     async cargarMateriasAutores(){
         const listaAutores= await this._autorRepository.find();
@@ -62,18 +76,11 @@ export class PedidoService {
                      libro => {
 
                         autorDinamico.libros.push(libro)
-                         console.log("holaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", autorDinamico.libros)
-                         console.log("AUTOREEEEEEEEEEEEEEEEEEEEEEEEES", autorDinamico)
+
                     }
                 )
-                console.log("QUI DEBERIA ESTAR DESPUES", autores)
-
                 autores.push(autorDinamico)
-                console.log("QUI DEBERIA ESTAR DESPUES 2", autores)
                 cont++
-                console.log("CONT", cont)
-                console.log("LENG", listaAutores.length)
-
                 if(cont==listaAutores.length){
                     console.log("FIIIIIIIIIIIIN", autores[0].libros[0].nombre)
                     return autores
@@ -87,6 +94,7 @@ export class PedidoService {
 
     }
     editar(pedidoEditar: Pedido){
+        console.log("LLEGUE A EDITAR", pedidoEditar)
         return this._pedidosRepository.update(pedidoEditar.ipPedido, pedidoEditar)
     }
 

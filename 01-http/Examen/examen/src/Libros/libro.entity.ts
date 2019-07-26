@@ -37,6 +37,12 @@ export class LibroEntity {
     })
     fechaPublicacion: string
 
+    @Column({
+        type: 'decimal',
+        name: 'precio',
+    })
+    precio: number
+
 
     @Column({
         type: 'date',
