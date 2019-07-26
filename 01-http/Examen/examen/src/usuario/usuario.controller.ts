@@ -35,11 +35,10 @@ export class UsuarioController {
 
             }else{
                 console.log("  CLIENTE")
-                this._pedidoService.librosSeleccionados=[]
-                const pedidoNuevo=await this._pedidoService.crearPedido()
 
+                res.redirect('/api/usuario/menu_cliente')
                // const pedido=
-                return res.redirect('/api/pedido/realizarPedidos/'+pedidoNuevo.ipPedido+'/-1/'+0)
+
             }
 
 
@@ -51,11 +50,11 @@ export class UsuarioController {
 
 
     }
-        @Get('prueba')
+        @Get('menu_cliente')
         get(@Res() res) {
 
-            console.log("jajaja")
-            res.render('cliente/prueba')
+
+            res.render('cliente/menu_cliente')
 
         }
 }

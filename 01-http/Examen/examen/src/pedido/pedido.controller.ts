@@ -27,7 +27,14 @@ export class PedidoController {
 
        
         const listaAutores= await  this._pedidoService.getAutores()
+        console.log("mi lista autores", listaAutores)
         return res.render('cliente/pedido',{pedidoNuevo, listaLibros, listaAutores, librosSeleccionados,total})
+    }
+    @Get('crearPedido')
+    async crearPedido(@Res() res){
+        this._pedidoService.librosSeleccionados=[]
+        const pedidoNuevo=await this._pedidoService.crearPedido()
+        return res.redirect('/api/pedido/realizarPedidos/'+pedidoNuevo.ipPedido+'/-1/'+0)
     }
     @Post('addPedido')
     async addPedido(@Res() res, @Body() body){
@@ -99,10 +106,11 @@ export class PedidoController {
             console.log("Errores", errores)
             pedido.estadoPedido="Por despachar"
             const respuestaCrear = await this._pedidoService.editar(pedido)
+            res.redirect('/api/usuario/menu_cliente')
 
         }catch (e) {
             console.log("ERRORDEF", e)
-            res.redirect('/api/pedido/lista');
+            res.redirect('/api/pedido/menu_cliente');
 
         }
 

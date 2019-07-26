@@ -34,7 +34,7 @@ export class PedidoService {
         return this._pedidosRepository.save(objetoEntidad)
     }
     getAutores(){
-        return this._pedidosRepository.find()
+        return this._autorRepository.find()
 
     }
     getLibros(idAutor:number){
