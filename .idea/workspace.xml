@@ -105,8 +105,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/views/cliente/despachador.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="121" column="30" lean-forward="true" selection-start-line="121" selection-start-column="30" selection-end-line="121" selection-end-column="30" />
+            <state relative-caret-position="155">
+              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -272,9 +272,8 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="952" />
     <option name="width" value="977" />
     <option name="height" value="1038" />
   </component>
@@ -296,89 +295,6 @@
               <item name="guerrero-burbano-jenny-sofia" type="b2602c69:ProjectViewProjectNode" />
               <item name="guerrero-burbano-jenny-sofia" type="462c0819:PsiDirectoryNode" />
               <item name="01-http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guerrero-burbano-jenny-sofia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="guerrero-burbano-jenny-sofia" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="01-servidor-web-estatico" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guerrero-burbano-jenny-sofia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="guerrero-burbano-jenny-sofia" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guerrero-burbano-jenny-sofia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="guerrero-burbano-jenny-sofia" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
-              <item name="api-web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guerrero-burbano-jenny-sofia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="guerrero-burbano-jenny-sofia" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
-              <item name="api-web" type="462c0819:PsiDirectoryNode" />
-              <item name="publico" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guerrero-burbano-jenny-sofia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="guerrero-burbano-jenny-sofia" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="02-servidor-web-nodejs" type="462c0819:PsiDirectoryNode" />
-              <item name="api-web" type="462c0819:PsiDirectoryNode" />
-              <item name="publico" type="462c0819:PsiDirectoryNode" />
-              <item name="webSockets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guerrero-burbano-jenny-sofia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="guerrero-burbano-jenny-sofia" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="Examen" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guerrero-burbano-jenny-sofia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="guerrero-burbano-jenny-sofia" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="Examen" type="462c0819:PsiDirectoryNode" />
-              <item name="examen" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guerrero-burbano-jenny-sofia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="guerrero-burbano-jenny-sofia" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="Examen" type="462c0819:PsiDirectoryNode" />
-              <item name="examen" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guerrero-burbano-jenny-sofia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="guerrero-burbano-jenny-sofia" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="Examen" type="462c0819:PsiDirectoryNode" />
-              <item name="examen" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="cliente" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guerrero-burbano-jenny-sofia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="guerrero-burbano-jenny-sofia" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="Examen" type="462c0819:PsiDirectoryNode" />
-              <item name="examen" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guerrero-burbano-jenny-sofia" type="b2602c69:ProjectViewProjectNode" />
-              <item name="guerrero-burbano-jenny-sofia" type="462c0819:PsiDirectoryNode" />
-              <item name="01-http" type="462c0819:PsiDirectoryNode" />
-              <item name="Examen" type="462c0819:PsiDirectoryNode" />
-              <item name="examen" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="cliente" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="guerrero-burbano-jenny-sofia" type="b2602c69:ProjectViewProjectNode" />
@@ -527,7 +443,7 @@
       <workItem from="1563572748580" duration="4203000" />
       <workItem from="1563981515726" duration="25349000" />
       <workItem from="1564064425281" duration="47501000" />
-      <workItem from="1564178661218" duration="5255000" />
+      <workItem from="1564178661218" duration="5575000" />
     </task>
     <task id="LOCAL-00001" summary="Ejemplos de operadores">
       <created>1556657194836</created>
@@ -540,7 +456,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="433068000" />
+    <option name="totallyTimeSpent" value="433388000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -553,7 +469,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22207534" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -1019,8 +934,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/views/cliente/despachador.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="121" column="30" lean-forward="true" selection-start-line="121" selection-start-column="30" selection-end-line="121" selection-end-column="30" />
+        <state relative-caret-position="155">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
         </state>
       </provider>
     </entry>
