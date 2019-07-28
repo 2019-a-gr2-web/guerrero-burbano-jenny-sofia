@@ -41,6 +41,15 @@ export class ClienteGateway {
 
         client.broadcast.emit('recarga', data);// broadcast a todos los sockets del servidor
         return 'Hola' ;
+    }   @SubscribeMessage('recargaPedido')
+    recargarPAginaPedido(client: Client | any, data: any) {
+        console.log("AQUI  VA A REGARGAR LA PAGINA")
+        console.log(data);
+        console.log('Nos hacen la peticion');
+        //console.log("server: ",this.server);
+
+        client.broadcast.emit('recargaPedido', data);// broadcast a todos los sockets del servidor
+        return 'Hola' ;
     }
     @SubscribeMessage('realizoPedido')
     findAll(client:Client | any,data:any){

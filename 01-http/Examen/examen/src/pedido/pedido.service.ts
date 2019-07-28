@@ -48,6 +48,7 @@ export class PedidoService {
 
         return this._pedidosRepository.findOne({where: {ipPedido: idPedido }})
     }
+
     getPedido(){
         return this._pedidosRepository.find()
     }
@@ -100,6 +101,11 @@ export class PedidoService {
     async despachar(idPedido: number){
         var pedido:Pedido=await this._pedidosRepository.findOne({where: {ipPedido: idPedido}})
         pedido.estadoPedido="Despachado"
+        return this._pedidosRepository.update(idPedido, pedido)
+    }
+    async cancelar(idPedido: number){
+        var pedido:Pedido=await this._pedidosRepository.findOne({where: {ipPedido: idPedido}})
+        pedido.estadoPedido="Cancelado"
         return this._pedidosRepository.update(idPedido, pedido)
     }
 

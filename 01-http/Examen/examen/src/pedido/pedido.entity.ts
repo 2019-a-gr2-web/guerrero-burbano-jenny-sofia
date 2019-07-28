@@ -54,7 +54,7 @@ export class PedidoEntity {
         type:'varchar',
         length:'13'
     })
-    estadoPedido: 'Iniciado' | 'Por despachar' | 'Despachado'
+    estadoPedido: 'Iniciado' | 'Por despachar' | 'Despachado' | 'Cancelado'
 
 
 }

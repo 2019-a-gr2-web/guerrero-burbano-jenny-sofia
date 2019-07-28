@@ -6,5 +6,5 @@ export interface Pedido {
     ciUsuario:string;
     totalSinImpuesto:number;
     totalConImpuesto:number;
-    estadoPedido: 'Iniciado' | 'Por despachar' | 'Despachado'
+    estadoPedido: 'Iniciado' | 'Por despachar' | 'Despachado' | 'Cancelado'
 }

@@ -37,7 +37,7 @@ export class ComboController {
     @Post('buscar')
     async buscarCombos(@Res() res, @Body('nombre') nombre:string) {
         const arregloCombos = await this._combosService.buscar(nombre)
-        console.log('RESULTADO BUSQUEDA', arregloCombos)
+        console.log('RESULTADO BUSQUEDA', nombre)
         res.render('combos/inicioCombo', {arregloCombos});
 
     }

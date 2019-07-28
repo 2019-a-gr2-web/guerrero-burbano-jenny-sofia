@@ -14,11 +14,11 @@
 
 </head>
 <body>
-<button onclick="recarga()"></button>
+<input type="text" value="<%= busqueda%>">
 <script>
     function recarga() {
 
-        const nombreMetodo ='recarga';
+        const nombreMetodo = 'recarga';
         const datos = {
             accion: 'recargar'
 
@@ -37,14 +37,14 @@
 
 <div>
     <legend>Estado: <%= pedidoNuevo.estadoPedido %></legend>
-    <input id="idPedido" value="<%=pedidoNuevo.ipPedido%>">
+    <input type="hidden" id="idPedido" value="<%= pedidoNuevo.ipPedido %>">
 </div>
 <div>
 
 </div>
 <button id="mostrar" class="btn btn-success pull-right">REALIZAR COMPRA</button>
 <form action="/api/usuario/menu_cliente">
-<button id="mostrar" class="btn btn-success">REGRESAR AL MENÚ</button>
+    <button id="mostrar" class="btn btn-success">REGRESAR AL MENÚ</button>
 </form>
 <script>
     var button = document.getElementById('mostrar'); // Assumes element with id='button'
@@ -61,8 +61,8 @@
 <div id="formPedido" style="display: none">
     <form action="/api/pedido/editar"
           method="post">
-        <label for="telefono">ID:</label>
-        <input type="text" class="form-control" id="telefono" name="ipPedido" value="<%= pedidoNuevo.ipPedido %>">
+
+        <input type="hidden" class="form-control" id="telefono" name="ipPedido" value="<%= pedidoNuevo.ipPedido %>">
         <div class="col-md-6">
             <label for="nombreUsr">Nombre:</label>
             <input type="text" class="form-control" id="nombreUsr" name="nombreUsuario">
@@ -83,7 +83,8 @@
             </div>
             <div class="col-md-6">
                 <label for="totalCon">Total con impuestos:</label>
-                <input type="text" class="form-control" id="totalCon" name="totalConImpuesto" value="<%= total*1.12%>">
+                <input type="text" class="form-control" id="totalCon" name="totalConImpuesto"
+                       value="<%= total * 1.12 %>">
             </div>
             <div class="col-md-12 ">
                 <button type="submit" onclick="realizarPedido()" class="btn btn-success pull-right">COMPRAR</button>
@@ -103,7 +104,7 @@
         const ciUsuario = document.getElementById("ciUsr").value;
         const direccionUsuario = document.getElementById("direccion").value;
         const telefonoUsuario = document.getElementById("telefono").value;
-        const idPedido= document.getElementById("idPedido").value
+        const idPedido = document.getElementById("idPedido").value
         const nombreMetodo = 'realizoPedido';
         const datos = {
             nombreUsuario: nombreUsuario,
@@ -149,16 +150,35 @@
 <div class="panel-body">
     <div class="col-md-6">
         <legend>Articulos dispnibles</legend>
-        <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Seleccione un autor
-                <span class="caret"></span></button>
-            <ul class="dropdown-menu">
-                <% listaAutores.forEach((autor)=>{ %>
-                    <li><a href="/api/pedido/realizarPedidos/<%=pedidoNuevo.ipPedido%>/<%=autor.id%>/<%=total%>"><%= autor.nombres %></a></li>
-                <% }) %>
+        <div class="col-sm-5">
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Seleccione un autor
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <% listaAutores.forEach((autor)=>{ %>
+                        <li>
+                            <a href="/api/pedido/realizarPedidos/<%= pedidoNuevo.ipPedido %>/<%= autor.id %>/<%= total %>/<%= busqueda%>"><%= autor.nombres %></a>
+                        </li>
+                    <% }) %>
 
-            </ul>
+                </ul>
+            </div>
         </div>
+        <div class=" dropdown col-md-7">
+
+            <form action="/api/pedido/buscar/<%= pedidoNuevo.ipPedido %>/<%= idAutor %>/<%= total %>" method="post">
+                <div class="class-md-6">
+                    <input id="email" type="text" class="form-control" name="buscar" placeholder="Buscar">
+                </div>
+                <div class="class-md-6">
+                    <button class="btn btn-info pull-right"> Buscar </button>
+                </div>
+            </form>
+
+
+
+        </div>
+
         <table class="table table-hover">
             <thead>
             <tr>
@@ -186,6 +206,8 @@
                             <input id="Id" type="hidden" class="form-control" name="id" value="<%= libro.id %>">
                             <input id="idPedido" type="hidden" class="form-control" name="idPedido"
                                    value="<%= pedidoNuevo.ipPedido %>">
+                            <input id="busqueda" type="hidden" class="form-control" name="busqueda"
+                                   value="<%=busqueda %>">
 
                             <button type="submit" class="btn btn-default btn-sm">
                                 <span class="glyphicon glyphicon-plus"></span> Plus
@@ -224,10 +246,12 @@
 
                         </td>
                         <td>
+                            <form action="/api/pedido/deletePedido">
                             <input id="Id" type="hidden" class="form-control" name="id" value="<%= libro.id %>">
-                            <button type="submit" class="btn btn-default btn-sm">
-                                <span class="glyphicon glyphicon-plus"></span> Plus
+                            <button type="submit" class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-minus"></span> Menos
                             </button>
+                            </form>
                     </form>
                     </td>
 

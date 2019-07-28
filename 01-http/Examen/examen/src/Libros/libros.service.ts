@@ -17,14 +17,35 @@ export class LibrosService {
         this.idnum++
     }
     encontrar(nombreTmp, id){
-        console.log(nombreTmp.toString())
-        const arreglo= this.appService.bdLibros.filter(
-            value => {
-                return value.nombre.toUpperCase().includes(nombreTmp.toString().toUpperCase()) && value.autorId==id
-            }
+        // console.log(nombreTmp.toString())
+        // const arreglo= this.appService.bdLibros.filter(
+        //     value => {
+        //         return value.nombre.toUpperCase().includes(nombreTmp.toString().toUpperCase()) && value.autorId==id
+        //     }
+        //
+        // )
+        // return arreglo
+    }
+    bucar(parametrosBusqueda?){
+        // var lisa
+        //
+        //     if (parametrosBusqueda) {
+        //         var x=this.appService.listaCombos.filter(
+        //             value => {
+        //
+        //                 return value.nombre.toUpperCase().includes(parametrosBusqueda.toString().toUpperCase())
+        //
+        //             }
+        //         )
+        //
+        //         console.log("lista", x)
+        //         console.log("lista2", this.appService.listaPlatos)
+        //         return x
+        //     } else {
+        //         return this._combosRepository.find()
+        //     }
 
-        )
-        return arreglo
+
     }
     eliminar(id:number){
         const index=this.appService.bdLibros.findIndex(
