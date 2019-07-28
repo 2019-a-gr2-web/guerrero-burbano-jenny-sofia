@@ -20,31 +20,8 @@ export class AppService {
       numeroLibros: 34
 
     }
-    const auxLibro: Libro={
-      id:1,
-      ICBN:123456,
-      nombre:"Las aventuras de Sofi",
-      nombreEditorial:"Libritos",
-      numeroPaginas:35,
-      edicion: 3,
-      fechaPublicacion: new Date(),
-      autorId:1
 
-    }
-    const auxLibro2: Libro={
-      id:0,
-      ICBN:123456,
-      nombre:"Las aventuras de Micky",
-      nombreEditorial:"Libritos2",
-      numeroPaginas:35,
-      edicion: 3,
-      fechaPublicacion: new Date(),
-      autorId:2
 
-    }
-    this.bdAutores.push(auxAutor)
-    this.bdLibros.push(auxLibro)
-    this.bdLibros.push(auxLibro2)
   }
 
   getHello(): string {
