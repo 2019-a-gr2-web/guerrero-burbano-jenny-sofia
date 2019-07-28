@@ -20,12 +20,7 @@
 
 
 </div>
-<div class="col-md-6 text-left">
-    <legend class="col-md-6"><%= tempNombre %></legend>
-    <form method="get" action="/api/salir">
-        <button class="col-md-6 btn btn-danger">Salir</button>
-    </form>
-</div>
+
 <div class="col-md-12">
     <div class="panel panel-info">
         <div class="panel-heading">
@@ -33,16 +28,16 @@
 
         </div>
         <div class="panel-body">
-            <form action="/api/libros/encontrar" method="post">
+            <form action="/api/autores/buscarHijos/<%= id%>" method="post">
                 <div class="col-md-8">
                     <div class="input-group ">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
-                        <input  id="email" type="text" class="form-control" name="nombre" placeholder="Escriba aquí....">
+                        <input  id="email" type="text" class="form-control" name="buscar" placeholder="Escriba aquí....">
 
                     </div>
 
                 </div>
-                <input type="hidden" name="id" class="form-control" id="Id"  value="<%= id %>">
+
                 <div class="col-md-2 ">
 
 

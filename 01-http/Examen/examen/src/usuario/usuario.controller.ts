@@ -2,11 +2,13 @@ import {Body, Controller, Get, Param, Post, Query, Res, Session} from "@nestjs/c
 import {Usuario} from "./interfaces/usuario";
 import {UsuarioService} from "./usuario.service";
 import {PedidoService} from '../pedido/pedido.service';
+import {LibrosService} from '../Libros/libros.service';
+import {AutoresService} from '../Autores/autores.service';
 
     @Controller('/api/usuario')
 export class UsuarioController {
 
-    constructor(private readonly _UsuarioService:UsuarioService, private readonly _pedidoService:PedidoService){
+    constructor(private readonly _UsuarioService:UsuarioService, private readonly _pedidoService:PedidoService, private readonly _autoresService:AutoresService){
 
     }
     @Post('autenticando')
@@ -26,8 +28,10 @@ export class UsuarioController {
             session.password = usuario.passUsuario;
             if(valor.tipoUsuario=="Admin"){
                 const tempNombre= valor.nombreUsuario
-                console.log("aDMINISTRADOR!!!!!!!")
-                return res.render('menu/menu', {tempNombre})
+
+                const arregloAutores= await this._autoresService.buscar()
+                console.log("aDMINISTRADOR!!!!!!!", arregloAutores)
+                return res.render('menu/menu', {tempNombre,arregloAutores})
             }else if(valor.tipoUsuario=="Despachador"){
 
                 console.log("  DESPACHADOR")

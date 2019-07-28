@@ -2,21 +2,31 @@ import {Body, Controller, Get, Param, Post, Req, Res} from '@nestjs/common';
 import {AppService} from '../app.service';
 import {AutoresService} from './autores.service';
 import {Autor} from './Interfaces/autor';
+import {LibrosService} from '../Libros/libros.service';
 
 @Controller('/api/autores')
 export class AutoresController {
     arregloAutores: Autor[]=[]
-    constructor(private readonly autoresService: AutoresService, private readonly appService: AppService) {
+    constructor(private readonly autoresService: AutoresService, private readonly appService: AppService,
+                private readonly librosService: LibrosService) {
         this.arregloAutores=appService.bdAutores
     }
-    @Get('ver')
-    ver(@Res() res, @Req() req){
-
-       const arregloAutores= this.appService.bdAutores
-
-        const tempNombre=req.signedCookies.nombreUsuario
-        return res.render('gestion/gAutor',{tempNombre, arregloAutores} )
-
+    @Get('verHijos/:id')
+    async ver(@Res() res, @Req() req, @Param() params){
+        var arregloHijos=await this.librosService.getLibros(params.id)
+        const id=params.id
+        res.render('gestion/gLibro', {arregloHijos, id})
+    }
+    @Post('buscarHijos/:id')
+    async buscarHijos(@Res() res, @Req() req, @Param() params, @Body() body){
+        var arregloHijos=await this.librosService.getLibros(params.id)
+        const id=params.id
+        arregloHijos= arregloHijos.filter(
+            value => {
+                return value.nombre.toUpperCase().includes(body.buscar.toUpperCase()) || value.nombreEditorial.toUpperCase().includes(body.buscar.toUpperCase())
+            }
+        )
+        res.render('gestion/gLibro', {arregloHijos, id})
     }
     @Post('crear')
     crear(@Res() res, @Body() autor:Autor, @Req() req){
@@ -46,7 +56,7 @@ export class AutoresController {
         if(tempNombre){
         const arregloHijos= this.appService.bdLibros.filter(
             value => {
-                return value.autorId==param.id
+                return value.autor==param.id
             }
         )
 

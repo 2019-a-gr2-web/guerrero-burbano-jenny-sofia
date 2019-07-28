@@ -4,6 +4,7 @@ import {AppService} from '../app.service';
 import {LibrosService} from './libros.service';
 import {Autor} from '../Autores/Interfaces/autor';
 import {Libro} from './interfaces/libro';
+import {LibroEntity} from './libro.entity';
 
 @Controller('/api/libros')
 export class LibrosController {
@@ -11,7 +12,7 @@ export class LibrosController {
     constructor(private readonly librosService: LibrosService, private readonly appService: AppService) {
 
     }
-    @Get('ver')
+    @Get('verLibros')
     ver(@Res() res, @Req() req){
         const tempNombre= req.signedCookies.nombreUsuario
 
@@ -19,21 +20,7 @@ export class LibrosController {
         console.log("ARREGLO LIBROOOOOOOS", arregloTemp)
         return res.render('gestion/gLibro', {arregloTemp, tempNombre})
     }
-    @Post('eliminar')
-    eliminar(@Res() res, @Req() req, @Body() body){
-        const tempNombre= req.signedCookies.nombreUsuario
-        this.librosService.eliminar(body.id)
-        const arregloHijos= this.appService.bdLibros.filter(
-            value => {
-                return value.autor==body.idAutor
-            }
-        )
-        const id= body.idAutor
-        const idAutor= body.id
 
-        return res.render('gestion/gLibro', {arregloHijos, tempNombre, id})
-
-    }
     @Post('encontrar')
     encontrar(@Res() res, @Body() body,  @Req() req){
         const tempNombre=req.signedCookies.nombreUsuario
@@ -42,11 +29,11 @@ export class LibrosController {
         res.render('gestion/gLibro', {arregloHijos, tempNombre, id})
     }
     @Post('crear')
-    crear(@Res() res, @Body() libro:Libro, @Req() req){
+    crear(@Res() res, @Body() libro:LibroEntity, @Req() req){
 
 
-        console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!", libro.autor)
-        this.librosService.crear(libro);
+        console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!", libro)
+        this.librosService.crearLibro(libro);
         const arregloHijos= this.appService.bdLibros.filter(
             value => {
                 return value.autor==libro.autor
@@ -54,12 +41,15 @@ export class LibrosController {
         )
 
         const id=libro.autor
-        const tempNombre=req.signedCookies.nombreUsuario
-        if(tempNombre){
-        return res.render('gestion/gLibro', {arregloHijos, tempNombre, id})
-        }else{
-            return res.render('login/login')
-        }
+        res.redirect('/api/autores/verHijos/'+libro.autor)
+    }
+    @Post('eliminar')
+    eliminarLibro(@Res() res, @Body() body, @Req() req){
+
+
+        this.librosService.eliminarLibro(body.id);
+        const id=body.idAutor
+        res.redirect('/api/autores/verHijos/'+id)
     }
 
 }

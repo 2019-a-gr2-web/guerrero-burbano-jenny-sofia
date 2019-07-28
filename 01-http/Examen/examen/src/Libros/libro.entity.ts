@@ -44,18 +44,14 @@ export class LibroEntity {
     precio: number
 
 
-    @Column({
-        type: 'date',
-        name: 'fechaNacimiento',
-    })
-    fechaNacimiento: Date;
+
 
 
     @Column({
         type: 'varchar',
         name: 'nombreEditorial',
     })
-    nombreEditorial: boolean;
+    nombreEditorial: string;
 
     @ManyToOne(type => AutorEntity, autor=>autor.libro)
     autor: number

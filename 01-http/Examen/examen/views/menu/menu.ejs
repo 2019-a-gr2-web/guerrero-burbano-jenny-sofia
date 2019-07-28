@@ -29,40 +29,47 @@
     </style>
 </head>
 <body>
-<div class="panel panel-default container encabezado">
-    <table class="table table-striped">
-        <thead>
-        <tr>
-            <th>ICBN</th>
-            <th>Nombre</th>
-            <th>Número de páginas</th>
-            <th>Edición</th>
-            <th>Fecha publicación</th>
-            <th>Nombre Editorial</th>
 
-        </tr>
-        <% arregloHijos.forEach((libro)=>{ %>
-            <tr>
-                <td><%= libro.ICBN %></td>
-                <td><%= libro.nombre %></td>
-                <td><%= libro.numeroPaginas %></td>
-                <td><%= libro.edicion %></td>
-                <td><%= libro.fechaPublicacion %></td>
-                <td><%= libro.nombreEditorial %></td>
-                <td><%= libro.autorId %></td>
 
-                <td>
-                    <form action="/api/libros/eliminar"
-                          method="post">
-                        <input type="number"  name="id" value="<%=libro.id%>" hidden >
-                        <input type="hidden" name="idAutor" class="form-control" id="Id" value=<%= id %>>
-                        <button class="btn btn-danger">Eliminar</button>
-                    </form>
-                </td>
 
-            </tr>
-        <% }) %>
-    </table>
+<div class="col-md-12">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <legend class="">GESTIÓN DE AUTORES</legend>
+
+        </div>
+        <div class="panel-body">
+
+
+            <div class="col-md-12 separador"></div>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellidos</th>
+                    <th>FechaNacimiento</th>
+                    <th>Numero libros</th>
+                    <th>Es ecuatoriano?</th>
+                    <th>Opciones</th>
+                </tr>
+                <% arregloAutores.forEach((autor)=>{ %>
+                    <tr>
+                        <td><%= autor.nombres %></td>
+                        <td><%= autor.apellidos %></td>
+                        <td><%= autor.fechaNacimiento %></td>
+                        <td><%= autor.numeroLibros %></td>
+                        <td><%= autor.ecuatoriano %></td>
+
+                        <td>
+                            <form action="/api/autores/verHijos/<%= autor.id%>">
+                                <button class="btn btn-info">Gestionar Hijos</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% }) %>
+            </table>
+        </div>
+    </div>
 </div>
 
 

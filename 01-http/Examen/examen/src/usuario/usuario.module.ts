@@ -5,6 +5,9 @@ import {UsuarioController} from "./usuario.controller";
 import {UsuarioService} from "./usuario.service";
 import {PedidoModule} from '../pedido/pedido.module';
 import {PedidoEntity} from '../pedido/pedido.entity';
+import {LibrosService} from '../Libros/libros.service';
+import {LibrosModule} from '../Libros/libros.module';
+import {AutoresModule} from '../Autores/autores.module';
 
 @Module({
     imports:[
@@ -13,7 +16,7 @@ import {PedidoEntity} from '../pedido/pedido.entity';
                 UsuarioEntity
             ],
             'default'
-        ), PedidoModule
+        ), PedidoModule, LibrosModule, AutoresModule
     ],
     controllers:[UsuarioController],
     providers:[UsuarioService],

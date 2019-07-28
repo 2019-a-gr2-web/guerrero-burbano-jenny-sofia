@@ -10,6 +10,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import {ComboEntity} from '../../../../restaurante-proyecto/src/combos/combo.entity';
 import {RelacionEntity} from '../../../../restaurante-proyecto/src/combos/relacion.entity';
 import {AutorEntity} from './autor.entity';
+import {LibrosModule} from '../Libros/libros.module';
 
 @Module(
     {
@@ -19,7 +20,7 @@ import {AutorEntity} from './autor.entity';
                     AutorEntity
                 ],
                 'default'
-            )
+            ), LibrosModule
         ],
         controllers: [AutoresController],
         providers: [AutoresService, AppService],
