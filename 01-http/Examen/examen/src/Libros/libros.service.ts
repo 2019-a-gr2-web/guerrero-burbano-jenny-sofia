@@ -6,6 +6,7 @@ import {LibroEntity} from './libro.entity';
 import {getConnection, Repository} from 'typeorm';
 import {InjectRepository} from '@nestjs/typeorm';
 import {PlatoEntity} from '../../../../restaurante-proyecto/src/platos/plato.entity';
+import {RelacionEntity} from '../../../../restaurante-proyecto/src/combos/relacion.entity';
 
 @Injectable()
 export class LibrosService {
@@ -37,6 +38,9 @@ export class LibrosService {
 
         this.appService.bdLibros.push(nuevoLibro)
         this.idnum++
+    }
+   editar(libro:LibroEntity){
+        return this._libroRepository.update(libro.id, libro)
     }
     getLibros(idAutor:number){
         return this._libroRepository.find({where: {autor: idAutor}})

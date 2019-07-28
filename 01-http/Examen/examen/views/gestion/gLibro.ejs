@@ -67,14 +67,19 @@
                 </tr>
                 <% arregloHijos.forEach((libro)=>{ %>
                     <tr>
-                        <td><%= libro.ICBN %></td>
-                        <td><%= libro.nombre %></td>
-                        <td><%= libro.numeroPaginas %></td>
-                        <td><%= libro.edicion %></td>
-                        <td><%= libro.fechaPublicacion %></td>
-                        <td><%= libro.nombreEditorial %></td>
-                        <td><%= libro.autorId %></td>
-
+                        <form action="/api/autores/actualizar" method="post">
+                        <td><input type="text" name="ICBN" value="<%= libro.ICBN %>"></td>
+                        <td><input type="text" name="nombre" value="<%= libro.nombre %>"></td>
+                        <td><input type="text" name="numeroPaginas" value="<%= libro.numeroPaginas %>"></td>
+                        <td><input type="text" name="edicion" value="<%= libro.edicion %>"></td>
+                        <td><input type="text" name="fechaPublicacion" value="<%= libro.fechaPublicacion %>"></td>
+                        <td><input type="text" name="nombreEditorial" value="<%= libro.nombreEditorial %>"></td>
+                        <td><input type="hidden" name="autor" value="<%= id %>"></td>
+                            <input type="hidden" name="id" value="<%= libro.id %>">
+                            <td>
+                                <button class="btn btn-info" type="submit">Editar</button>
+                            </td>
+                        </form>
                         <td>
                             <form action="/api/libros/eliminar"
                                   method="post">

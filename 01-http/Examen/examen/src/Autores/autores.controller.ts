@@ -3,6 +3,8 @@ import {AppService} from '../app.service';
 import {AutoresService} from './autores.service';
 import {Autor} from './Interfaces/autor';
 import {LibrosService} from '../Libros/libros.service';
+import {LibroEntity} from '../Libros/libro.entity';
+import {Libro} from '../Libros/interfaces/libro';
 
 @Controller('/api/autores')
 export class AutoresController {
@@ -15,6 +17,7 @@ export class AutoresController {
     async ver(@Res() res, @Req() req, @Param() params){
         var arregloHijos=await this.librosService.getLibros(params.id)
         const id=params.id
+        console.log(arregloHijos)
         res.render('gestion/gLibro', {arregloHijos, id})
     }
     @Post('buscarHijos/:id')
@@ -26,7 +29,14 @@ export class AutoresController {
                 return value.nombre.toUpperCase().includes(body.buscar.toUpperCase()) || value.nombreEditorial.toUpperCase().includes(body.buscar.toUpperCase())
             }
         )
+
         res.render('gestion/gLibro', {arregloHijos, id})
+    }
+    @Post('actualizar')
+    async actualizar(@Res() res, @Req() req, @Param() params, @Body() body: LibroEntity){
+
+        this.librosService.editar(body)
+       return  res.redirect('/api/autores/verHijos/'+body.autor)
     }
     @Post('crear')
     crear(@Res() res, @Body() autor:Autor, @Req() req){
@@ -50,24 +60,22 @@ export class AutoresController {
         }
     }
 
-    @Get('gestionHijos/:id')
-    gestionHijos(@Res() res, @Param() param, @Req() req){
-        const tempNombre=req.signedCookies.nombreUsuario
-        if(tempNombre){
-        const arregloHijos= this.appService.bdLibros.filter(
-            value => {
-                return value.autor==param.id
-            }
-        )
-
-        const id=param.id;
-        this.appService.id=id;
-        console.log(arregloHijos)
-        return res.render('gestion/gLibro', {tempNombre, arregloHijos, id})
-        }else{
-            res.render('login/login')
-        }
-    }
+    // @Get('gestionHijos/:id')
+    // gestionHijos(@Res() res, @Param() param, @Req() req){
+    //
+    //     const arregloHijos= this.appService.bdLibros.filter(
+    //         value => {
+    //             return value.autor==param.id
+    //         }
+    //     )
+    //
+    //     const id=param.id;
+    //     this.appService.id=id;
+    //     var x="s"
+    //     console.log(arregloHijos)
+    //    // return res.render('gestion/gLibro', {x, arregloHijos, id})
+    //
+    // }
     @Post('eliminar')
     eliminar(@Res() res, @Body() body,  @Req() req){
 
