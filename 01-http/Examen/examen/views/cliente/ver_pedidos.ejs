@@ -106,7 +106,7 @@
         (data) => {
             console.log('Estamos recargados', data);
             var cont=0
-            while (cont<9000){
+            while (cont<10000){
                 cont++
             }
 
@@ -120,9 +120,13 @@
         'recargaPedido', //nombre del evento
         (data) => {
             console.log('Estamos recargados', data);
+            var cont=0
+            while (cont<50000){
+                cont++
+            }
 
+                location.reload()
 
-            location.reload()
             //socket.disconnect();
             //socket.connect()
         }

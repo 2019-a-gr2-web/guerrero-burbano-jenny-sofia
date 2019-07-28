@@ -32,6 +32,25 @@
         );
 
     }
+    function recargap() {
+
+        const nombreMetodo ='recargaPedido';
+        const datos = {
+            accion: 'recargarPedido'
+
+        };
+
+
+
+        socket.emit(
+            nombreMetodo,
+            datos,
+            (respuesta) => {
+                console.log(respuesta)
+            }
+        );
+
+    }
 </script>
 
 
@@ -99,6 +118,7 @@
 <script>
 
     function realizarPedido() {
+        recargap()
 
         const nombreUsuario = document.getElementById("nombreUsr").value;
         const ciUsuario = document.getElementById("ciUsr").value;

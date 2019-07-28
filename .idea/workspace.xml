@@ -104,6 +104,33 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/views/cliente/despachador.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="122" column="6" lean-forward="true" selection-start-line="108" selection-start-column="2" selection-end-line="122" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/views/cliente/menu_cliente.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="129">
+              <caret line="138" column="96" selection-start-line="138" selection-start-column="89" selection-end-line="138" selection-end-column="96" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/views/cliente/ver_pedidos.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1526">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/src/usuario/usuario.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="361">
@@ -113,25 +140,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/src/pedido/pedido.service.ts">
+        <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/views/cliente/pedido.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="20" column="62" selection-start-line="19" selection-start-column="63" selection-end-line="20" selection-end-column="62" />
-              <folding>
-                <element signature="e#0#42#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/src/Autores/autores.controller.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="22" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#76#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="11">
+              <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -158,19 +170,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/views/gestion/crearLibro.ejs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="63" column="39" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/src/Libros/libros.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+            <state relative-caret-position="154">
+              <caret line="49" column="34" lean-forward="true" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
               <folding>
                 <element signature="e#0#69#0" expanded="true" />
               </folding>
@@ -181,20 +184,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/src/Libros/libros.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
+            <state relative-caret-position="113">
+              <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/platos/plato.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="57" column="50" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -260,7 +254,6 @@
         <option value="$PROJECT_DIR$/01-http/Examen/examen/views/login/login.ejs" />
         <option value="$PROJECT_DIR$/01-http/02-servidor-web-nodejs/api-web/publico/webSockets/juego.html" />
         <option value="$PROJECT_DIR$/01-http/restaurante-proyecto/src/combos/combo.controller.ts" />
-        <option value="$PROJECT_DIR$/01-http/Examen/examen/views/cliente/pedido.ejs" />
         <option value="$PROJECT_DIR$/01-http/Examen/examen/src/cliente/cliente.gateway.ts" />
         <option value="$PROJECT_DIR$/01-http/Examen/examen/src/pedido/pedido.entity.ts" />
         <option value="$PROJECT_DIR$/01-http/Examen/examen/src/pedido/interfaces/pedido.ts" />
@@ -268,7 +261,6 @@
         <option value="$PROJECT_DIR$/01-http/Examen/examen/src/pedido/pedido.service.ts" />
         <option value="$PROJECT_DIR$/01-http/Examen/examen/src/pedido/pedido.controller.ts" />
         <option value="$PROJECT_DIR$/01-http/Examen/examen/views/cliente/despachador.ejs" />
-        <option value="$PROJECT_DIR$/01-http/Examen/examen/views/cliente/ver_pedidos.ejs" />
         <option value="$PROJECT_DIR$/01-http/Examen/examen/src/usuario/usuario.module.ts" />
         <option value="$PROJECT_DIR$/01-http/Examen/examen/src/usuario/usuario.controller.ts" />
         <option value="$PROJECT_DIR$/01-http/Examen/examen/src/Autores/autores.service.ts" />
@@ -280,6 +272,8 @@
         <option value="$PROJECT_DIR$/01-http/Examen/examen/src/Libros/libro.entity.ts" />
         <option value="$PROJECT_DIR$/01-http/Examen/examen/views/gestion/crearLibro.ejs" />
         <option value="$PROJECT_DIR$/01-http/Examen/examen/src/Libros/libros.controller.ts" />
+        <option value="$PROJECT_DIR$/01-http/Examen/examen/views/cliente/ver_pedidos.ejs" />
+        <option value="$PROJECT_DIR$/01-http/Examen/examen/views/cliente/pedido.ejs" />
       </list>
     </option>
   </component>
@@ -380,6 +374,15 @@
               <item name="Examen" type="462c0819:PsiDirectoryNode" />
               <item name="examen" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="guerrero-burbano-jenny-sofia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="guerrero-burbano-jenny-sofia" type="462c0819:PsiDirectoryNode" />
+              <item name="01-http" type="462c0819:PsiDirectoryNode" />
+              <item name="Examen" type="462c0819:PsiDirectoryNode" />
+              <item name="examen" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="cliente" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="guerrero-burbano-jenny-sofia" type="b2602c69:ProjectViewProjectNode" />
@@ -564,7 +567,7 @@
       <workItem from="1564064425281" duration="47501000" />
       <workItem from="1564178661218" duration="7816000" />
       <workItem from="1564270785477" duration="500000" />
-      <workItem from="1564271453315" duration="19460000" />
+      <workItem from="1564271453315" duration="22678000" />
     </task>
     <task id="LOCAL-00001" summary="Ejemplos de operadores">
       <created>1556657194836</created>
@@ -577,7 +580,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="455589000" />
+    <option name="totallyTimeSpent" value="458807000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -590,7 +593,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3139881" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -609,7 +611,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.31282052" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.051282052" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -852,34 +854,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/views/cliente/pedido.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-800">
-          <caret line="248" column="54" lean-forward="true" selection-start-line="248" selection-start-column="54" selection-end-line="248" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/views/cliente/despachador.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="122" column="6" lean-forward="true" selection-start-line="108" selection-start-column="2" selection-end-line="122" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/views/cliente/ver_pedidos.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="117" column="6" selection-start-line="117" selection-start-column="6" selection-end-line="117" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/views/cliente/menu_cliente.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="138" column="96" selection-start-line="138" selection-start-column="89" selection-end-line="138" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/01-http/restaurante-proyecto/src/combos/combo.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -993,16 +967,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/src/Libros/libros.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/views/gestion/crearLibro.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -1056,11 +1020,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/src/Libros/libros.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+        <state relative-caret-position="154">
+          <caret line="49" column="34" lean-forward="true" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
           <folding>
             <element signature="e#0#69#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/src/Libros/libros.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/views/cliente/despachador.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="122" column="6" lean-forward="true" selection-start-line="108" selection-start-column="2" selection-end-line="122" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/views/cliente/menu_cliente.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="138" column="96" selection-start-line="138" selection-start-column="89" selection-end-line="138" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/views/cliente/pedido.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/01-http/Examen/examen/views/cliente/ver_pedidos.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1526">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
